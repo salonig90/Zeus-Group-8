@@ -1,0 +1,10 @@
+2026-03-12 17:10:07: Performing system checks...
+2026-03-12 17:10:07: 
+2026-03-12 17:10:09: System check identified no issues (0 silenced).
+2026-03-12 17:10:09: March 12, 2026 - 17:10:09
+2026-03-12 17:10:09: Django version 5.2.12, using settings 'backend.settings'
+2026-03-12 17:10:09: Starting development server at http://0.0.0.0:8000/
+2026-03-12 17:10:09: Quit the server with CTRL-BREAK.
+2026-03-12 17:10:09: 
+2026-03-12 17:10:09: WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+2026-03-12 17:10:09: For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
