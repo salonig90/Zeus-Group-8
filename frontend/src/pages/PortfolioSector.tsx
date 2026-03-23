@@ -4,9 +4,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useAuth, PortfolioItem } from '../contexts/AuthContext';
 import { predictPrice, calculateDiscount, formatPrediction } from '../services/predictionService';
+import { fetchSectorStockSentiment, SectorSentimentResponse, StockSentimentItem } from '../services/stockSentimentService';
 import PERatioTrendGraph from '../components/PERatioTrendGraph';
 import KMeansVisualization from '../components/KMeansVisualization';
 import PricePredictionGraph from '../components/PricePredictionGraph';
+import { Brain, TrendingUp as TrendIcon, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 const PortfolioSectorContainer = styled.div`
   max-width: 1600px;
@@ -263,6 +265,64 @@ const StatValue = styled.div`
   letter-spacing: -1px;
 `;
 
+const AIInsightCard = styled(motion.div)<{ type: 'bullish' | 'bearish' | 'neutral' }>`
+  background: ${props => {
+    if (props.type === 'bullish') return 'rgba(0, 255, 163, 0.05)';
+    if (props.type === 'bearish') return 'rgba(255, 46, 99, 0.05)';
+    return 'rgba(255, 193, 7, 0.05)';
+  }};
+  border: 1px solid ${props => {
+    if (props.type === 'bullish') return 'rgba(0, 255, 163, 0.2)';
+    if (props.type === 'bearish') return 'rgba(255, 46, 99, 0.2)';
+    return 'rgba(255, 193, 7, 0.2)';
+  }};
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+`;
+
+const PredictionCard = styled(motion.div)`
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const RecommendationGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+`;
+
+const RecommendationCard = styled(motion.div)`
+  background: rgba(0, 255, 163, 0.05);
+  border: 1px solid rgba(0, 255, 163, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: 'TOP PICK';
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background: #00ffa3;
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: 900;
+    padding: 2px 30px;
+    transform: rotate(45deg);
+  }
+`;
+
 const SECTOR_ICONS: { [key: string]: string } = {
   'it': '💻',
   'banking': '🏦',
@@ -287,8 +347,10 @@ const PortfolioSector: React.FC = () => {
   const navigate = useNavigate();
   const { portfolioBySector, removeFromPortfolio } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeAnalytics, setActiveAnalytics] = useState<'none' | 'pe' | 'kmeans' | 'prediction' | 'table'>('none');
+  const [activeAnalytics, setActiveAnalytics] = useState<'none' | 'pe' | 'kmeans' | 'prediction' | 'ai_summary' | 'ml_forecast' | 'recommend' | 'table'>('none');
   const [stocksData, setStocksData] = useState<Map<string, ExtendedStockData>>(new Map());
+  const [sentimentData, setSentimentData] = useState<SectorSentimentResponse | null>(null);
+  const [loadingSentiment, setLoadingSentiment] = useState(false);
 
   const sectorName = sector?.toLowerCase() || '';
   const sectorStocks = useMemo(
@@ -308,13 +370,25 @@ const PortfolioSector: React.FC = () => {
   );
 
   // Fetch detailed stock data for analytics
-  const handleLoadAnalytics = useCallback(async (type: 'pe' | 'kmeans' | 'prediction') => {
+  const handleLoadAnalytics = useCallback(async (type: 'pe' | 'kmeans' | 'prediction' | 'ai_summary' | 'ml_forecast' | 'recommend') => {
     if (activeAnalytics === type) {
       setActiveAnalytics('none');
       return;
     }
 
     setActiveAnalytics(type);
+
+    if (['ai_summary', 'recommend'].includes(type) && !sentimentData) {
+      setLoadingSentiment(true);
+      try {
+        const data = await fetchSectorStockSentiment(sectorName);
+        setSentimentData(data);
+      } catch (err) {
+        console.error('Error fetching sentiment:', err);
+      } finally {
+        setLoadingSentiment(false);
+      }
+    }
 
     try {
       const newData = new Map(stocksData);
@@ -490,9 +564,132 @@ const PortfolioSector: React.FC = () => {
             >
               📈 PRICE PREDICTION
             </AnalyticsButton>
+            <AnalyticsButton
+              active={activeAnalytics === 'ai_summary'}
+              onClick={() => handleLoadAnalytics('ai_summary')}
+            >
+              🧠 AI SUMMARY
+            </AnalyticsButton>
+            <AnalyticsButton
+              active={activeAnalytics === 'ml_forecast'}
+              onClick={() => handleLoadAnalytics('ml_forecast')}
+            >
+              🤖 ML FORECAST
+            </AnalyticsButton>
+            <AnalyticsButton
+              active={activeAnalytics === 'recommend'}
+              onClick={() => handleLoadAnalytics('recommend')}
+            >
+              🌟 RECOMMEND
+            </AnalyticsButton>
           </AnalyticsButtonGroup>
 
           {/* Analytics Panels */}
+          {activeAnalytics === 'ai_summary' && (
+            <AnalyticsPanel
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h3 style={{ color: '#4ecdc4', marginTop: 0, marginBottom: '1.5rem' }}>
+                🧠 AI Portfolio Intelligence - {sectorName.toUpperCase()} Sector
+              </h3>
+              {loadingSentiment ? (
+                <div style={{ textAlign: 'center', padding: '2rem' }}>Analyzing market sentiment...</div>
+              ) : sentimentData ? (
+                <div>
+                  {sectorStocks.map(stock => {
+                    const sent = sentimentData.stocks[stock.symbol];
+                    if (!sent) return null;
+                    const type = sent.prediction === 'Bullish' ? 'bullish' : sent.prediction === 'Bearish' ? 'bearish' : 'neutral';
+                    return (
+                      <AIInsightCard key={stock.symbol} type={type}>
+                        <div style={{ fontSize: '1.5rem' }}>
+                          {type === 'bullish' ? <CheckCircle color="#00ffa3" /> : type === 'bearish' ? <AlertTriangle color="#ff2e63" /> : <Info color="#ffc107" />}
+                        </div>
+                        <div>
+                          <div style={{ fontWeight: 800, color: '#fff', marginBottom: '0.4rem' }}>{stock.symbol} - {sent.classification}</div>
+                          <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', margin: 0 }}>
+                            Zeus AI analyzed {sent.total_headlines} headlines for {stock.name}. 
+                            Market mood is {sent.classification.toLowerCase()} with {sent.confidence}% confidence. 
+                            {type === 'bullish' ? ' Technical indicators suggest continued momentum.' : type === 'bearish' ? ' Exercise caution as bearish pressure persists.' : ' Stock is currently consolidating with neutral bias.'}
+                          </p>
+                        </div>
+                      </AIInsightCard>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div style={{ color: '#ff6b6b' }}>Failed to load AI intelligence. Please try again.</div>
+              )}
+            </AnalyticsPanel>
+          )}
+
+          {activeAnalytics === 'ml_forecast' && (
+            <AnalyticsPanel
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h3 style={{ color: '#4ecdc4', marginTop: 0, marginBottom: '1.5rem' }}>
+                🤖 ML Future Projections (15-Day Horizon)
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                {sectorStocks.map(stock => {
+                  const prediction = predictPrice(stock.price, stock.change);
+                  return (
+                    <PredictionCard key={stock.symbol}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 800, color: '#4ecdc4' }}>{stock.symbol}</span>
+                        <TrendIcon size={18} color={prediction.direction === 'up' ? '#00ffa3' : '#ff2e63'} />
+                      </div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 900 }}>${prediction.predictedPrice.toFixed(2)}</div>
+                      <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>
+                        Projected 15-day change: 
+                        <span style={{ color: prediction.direction === 'up' ? '#00ffa3' : '#ff2e63', marginLeft: '5px' }}>
+                          {prediction.predictedChange >= 0 ? '+' : ''}{prediction.predictedChange.toFixed(2)}%
+                        </span>
+                      </div>
+                    </PredictionCard>
+                  );
+                })}
+              </div>
+            </AnalyticsPanel>
+          )}
+
+          {activeAnalytics === 'recommend' && (
+            <AnalyticsPanel
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h3 style={{ color: '#4ecdc4', marginTop: 0, marginBottom: '1.5rem' }}>
+                🌟 Zeus Top Recommendations - {sectorName.toUpperCase()}
+              </h3>
+              {loadingSentiment ? (
+                <div style={{ textAlign: 'center', padding: '2rem' }}>Scanning for opportunities...</div>
+              ) : sentimentData ? (
+                <RecommendationGrid>
+                  {Object.entries(sentimentData.stocks)
+                    .filter(([_, sent]) => sent.prediction === 'Bullish' && sent.confidence > 60)
+                    .sort((a, b) => b[1].overall_score - a[1].overall_score)
+                    .slice(0, 3)
+                    .map(([symbol, sent]) => (
+                      <RecommendationCard key={symbol} whileHover={{ scale: 1.03 }}>
+                        <div style={{ fontWeight: 900, fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>{symbol}</div>
+                        <div style={{ fontSize: '0.8rem', color: '#00ffa3', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                          Strong Buy Signal
+                        </div>
+                        <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)' }}>
+                          Confidence: {sent.confidence}%<br />
+                          Score: {(sent.overall_score * 100).toFixed(1)}% Positive
+                        </div>
+                      </RecommendationCard>
+                    ))}
+                </RecommendationGrid>
+              ) : (
+                <div style={{ color: '#ff6b6b' }}>Unable to generate recommendations.</div>
+              )}
+            </AnalyticsPanel>
+          )}
+
           {activeAnalytics === 'pe' && (
             <AnalyticsPanel
               initial={{ opacity: 0, y: 20 }}

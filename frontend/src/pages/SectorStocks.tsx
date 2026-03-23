@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { yfinanceService, StockData } from '../services/yfinanceService';
@@ -431,7 +431,8 @@ const LoadingPulse = styled.div`
 const SectorStocks: React.FC = () => {
   const { sector } = useParams<{ sector: string }>();
   const navigate = useNavigate();
-  const { addToPortfolio } = useAuth();
+  const location = useLocation();
+  const { addToPortfolio, user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
@@ -448,7 +449,9 @@ const SectorStocks: React.FC = () => {
     setError(null);
     
     try {
+      console.log(`Fetching stocks for sector: ${sector}`);
       const response = await yfinanceService.getSectorStocks(sector!);
+      console.log('Received stocks:', response);
       setStocks(response);
     } catch (err) {
       console.error('Error fetching sector stocks:', err);
@@ -528,6 +531,12 @@ const SectorStocks: React.FC = () => {
   );
 
   const handleAddToPortfolio = (stock: StockData) => {
+    if (!user) {
+      alert('Please Sign Up or Login to add stocks to your portfolio.');
+      navigate('/signup', { state: { from: location } });
+      return;
+    }
+
     addToPortfolio({
       symbol: stock.symbol,
       name: stock.name,
@@ -547,20 +556,18 @@ const SectorStocks: React.FC = () => {
   const sectorName = sector.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat(isUS ? 'en-US' : 'en-IN', {
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: isUS ? 'USD' : 'INR',
+      currency: 'USD',
       maximumFractionDigits: 2
     }).format(val);
   };
 
   const formatLargeNumber = (val: number) => {
-    if (isUS) {
-      if (val >= 1e12) return `$${(val / 1e12).toFixed(2)}T`;
-      if (val >= 1e9) return `$${(val / 1e9).toFixed(2)}B`;
-      return `$${(val / 1e6).toFixed(2)}M`;
-    }
-    return `₹${(val / 10000000).toFixed(0)} Cr`;
+    if (val >= 1e12) return `$${(val / 1e12).toFixed(2)}T`;
+    if (val >= 1e9) return `$${(val / 1e9).toFixed(2)}B`;
+    if (val >= 1e6) return `$${(val / 1e6).toFixed(2)}M`;
+    return `$${val.toLocaleString()}`;
   };
 
   const getScoreType = (score: number): string => {
@@ -576,7 +583,7 @@ const SectorStocks: React.FC = () => {
   };
 
   const renderSentimentTable = () => {
-    if (!sentimentData) return null;'';
+    if (!sentimentData) return null;
 
     const stockEntries = Object.entries(sentimentData.stocks);
     if (stockEntries.length === 0) return null;
@@ -816,7 +823,7 @@ const SectorStocks: React.FC = () => {
                     <td>{formatCurrency(stock.dayLow ?? 0)}</td>
                     <td>{(stock.peRatio ?? 0).toFixed(2)}</td>
                     <td>{formatLargeNumber(stock.marketCap ?? 0)}</td>
-                    <td>{(stock.volume ?? 0).toLocaleString(isUS ? 'en-US' : 'en-IN')}</td>
+                    <td>{(stock.volume ?? 0).toLocaleString('en-US')}</td>
                     <td>
                       <AddButton 
                         isAdded={addedStocks.has(stock.symbol)}

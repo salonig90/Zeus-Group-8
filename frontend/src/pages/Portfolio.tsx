@@ -406,8 +406,13 @@ const Portfolio: React.FC = () => {
     'fmcg': { icon: '🛒', color: '#fbc2eb', gradient: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)' },
     'metals': { icon: '⛏️', color: '#ffecd2', gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)' },
     'finance': { icon: '💰', color: '#a1c4fd', gradient: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)' },
+    'realty': { icon: '🏗️', color: '#84fab0', gradient: 'linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)' },
+    'capital_goods': { icon: '🏭', color: '#ff4081', gradient: 'linear-gradient(135deg, #ff4081 0%, #ff80ab 100%)' },
+    'telecom': { icon: '📡', color: '#536dfe', gradient: 'linear-gradient(135deg, #536dfe 0%, #8c9eff 100%)' },
+    'chemicals': { icon: '🧪', color: '#76ff03', gradient: 'linear-gradient(135deg, #76ff03 0%, #b2ff59 100%)' },
+    'consumer_durables': { icon: '🧺', color: '#ffd740', gradient: 'linear-gradient(135deg, #ffd740 0%, #ffe57f 100%)' },
+    'construction': { icon: '🏗️', color: '#ff6e40', gradient: 'linear-gradient(135deg, #ff6e40 0%, #ff9e80 100%)' },
     'hospitality': { icon: '🏨', color: '#d4fc79', gradient: 'linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)' },
-    'realty': { icon: '🏢', color: '#84fab0', gradient: 'linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)' },
     'us_stocks': { icon: '🇺🇸', color: '#667eea', gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' },
   };
 

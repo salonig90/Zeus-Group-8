@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import PriceTrendChart from '../components/PriceTrendChart';
+import MutualFunds from '../components/MutualFunds';
 import { fetchLiveMetalsPrices, MetalsData } from '../services/metalsApi';
 import { yfinanceService, StockData } from '../services/yfinanceService';
 import { getStaticHistoricalData } from '../services/staticHistoricalData';
@@ -768,7 +769,7 @@ const Home: React.FC = () => {
                   <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>{stock.name}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontWeight: 800, fontFamily: 'JetBrains Mono' }}>${(stock.currentPrice || 0).toLocaleString()}</div>
+                  <div style={{ fontWeight: 900, fontFamily: 'JetBrains Mono, monospace' }}>${(stock.currentPrice || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                   <div style={{ fontSize: '0.8rem', fontWeight: 800, color: (stock.change || 0) >= 0 ? '#00ffa3' : '#ff2e63' }}>
                     {(stock.change || 0) >= 0 ? '+' : ''}{(stock.changePercent || 0).toFixed(2)}%
                   </div>
@@ -790,11 +791,20 @@ const Home: React.FC = () => {
         </h2>
         {[
           { name: 'Automobile', icon: '🚗', path: '/vectors/automobile' },
-          { name: 'Hospitality', icon: '🏨', path: '/vectors/hospitality' },
-          { name: 'Finance', icon: '💼', path: '/vectors/finance' },
           { name: 'Banking', icon: '🏦', path: '/vectors/banking' },
+          { name: 'Finance', icon: '💰', path: '/vectors/finance' },
           { name: 'Energy', icon: '⚡', path: '/vectors/energy' },
           { name: 'Pharma', icon: '💊', path: '/vectors/pharma' },
+          { name: 'FMCG', icon: '🛒', path: '/vectors/fmcg' },
+          { name: 'Metals', icon: '⛏️', path: '/vectors/metals' },
+          { name: 'Realty', icon: '🏗️', path: '/vectors/realty' },
+          { name: 'IT', icon: '💻', path: '/vectors/it' },
+          { name: 'Capital Goods', icon: '🏭', path: '/vectors/capital_goods' },
+          { name: 'Telecom', icon: '📡', path: '/vectors/telecom' },
+          { name: 'Chemicals', icon: '🧪', path: '/vectors/chemicals' },
+          { name: 'Durables', icon: '🧺', path: '/vectors/consumer_durables' },
+          { name: 'Construction', icon: '🏗️', path: '/vectors/construction' },
+          { name: 'Hospitality', icon: '🏨', path: '/vectors/hospitality' },
         ].map(item => (
           <MatrixCard key={item.name} onClick={() => navigate(item.path)}>
             <div className="icon">{item.icon}</div>
@@ -802,6 +812,9 @@ const Home: React.FC = () => {
           </MatrixCard>
         ))}
       </GridContainer>
+
+      {/* ───── MUTUAL FUNDS ───── */}
+      <MutualFunds />
 
       {/* ───── GLOBAL INDICES ───── */}
       <h2 style={{ gridColumn: 'span 12', fontSize: '1.2rem', fontWeight: 900, letterSpacing: '2px', textTransform: 'uppercase', margin: '4rem 0 2rem' }}>

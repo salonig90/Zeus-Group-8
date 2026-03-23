@@ -36,53 +36,77 @@ export interface SearchResult {
   exchange: string;
 }
 
-// Common Indian stock symbols by sector
-const indianSectorSymbols = {
+// Common Indian stock symbols by sector (NIFTY 200)
+const indianSectorSymbols: { [key: string]: string[] } = {
   automobile: [
-    'TATAMOTORS.NS', 'M&M.NS', 'MARUTI.NS', 'BAJAJ-AUTO.NS', 'HEROMOTOCO.NS',
-    'ASHOKLEY.NS', 'EICHERMOT.NS', 'TVSMOTOR.NS', 'BOSCHLTD.NS', 'MOTHERSUMI.NS',
-    'FORCEMOTORS.NS', 'CUMMINSIND.NS'
-  ],
-  it: [
-    'INFY.NS', 'TCS.NS', 'HCLTECH.NS', 'WIPRO.NS', 'TECHM.NS',
-    'MINDTREE.NS', 'MPHASIS.NS', 'PERSISTENT.NS', 'COFORGE.NS',
-    'LTTS.NS', 'CDSL.NS', 'KPITTECH.NS', 'ELCL.NS'
-  ],
-  hospitality: [
-    'INDHOTEL.NS', 'EIHOTEL.NS', 'TAJGVK.NS', 'CHALET.NS', 'LUXIND.NS',
-    'APOLLOHOTEL.NS'
-  ],
-  finance: [
-    'BAJFINANCE.NS', 'HDFC.NS', 'BAJAJFINSV.NS', 'CHOLAFIN.NS', 'SBIFIN.NS',
-    'PFC.NS', 'RECLTD.NS', 'MUTHOOTFIN.NS', 'IIFL.NS', 'LICHSGFIN.NS'
+    'BAJAJ-AUTO.NS', 'BHARATFORG.NS', 'BOSCHLTD.NS', 'EICHERMOT.NS', 'EXIDEIND.NS',
+    'HEROMOTOCO.NS', 'HYUNDAI.NS', 'MRF.NS', 'M&M.NS', 'MARUTI.NS',
+    'MOTHERSON.NS', 'SONACOMS.NS', 'TVSMOTOR.NS', 'TATAMOTORS.NS', 'TIINDIA.NS'
   ],
   banking: [
-    'HDFCBANK.NS', 'ICICIBANK.NS', 'SBIN.NS', 'KOTAKBANK.NS', 'AXISBANK.NS',
-    'INDUSINDBK.NS', 'BANDHANBNK.NS', 'FEDERALBNK.NS', 'YESBANK.NS', 'IDFCFIRSTB.NS',
-    'AUBANK.NS', 'UTTAMSTEEL.NS'
+    'SBIN.NS', 'HDFCBANK.NS', 'ICICIBANK.NS', 'AXISBANK.NS', 'KOTAKBANK.NS',
+    'INDUSINDBK.NS', 'YESBANK.NS', 'BANKBARODA.NS', 'PNB.NS', 'CANBK.NS',
+    'UNIONBANK.NS', 'IDFCFIRSTB.NS', 'FEDERALBNK.NS', 'BANKINDIA.NS', 'INDIANB.NS'
+  ],
+  finance: [
+    'BAJFINANCE.NS', 'BAJAJFINSV.NS', 'JIOFIN.NS', 'MUTHOOTFIN.NS', 'SHRIRAMFIN.NS',
+    'LICHSGFIN.NS', 'PFC.NS', 'RECLTD.NS', 'MOTILALOFS.NS', 'CHOLAFIN.NS',
+    'HDFCAMC.NS', 'HDFCLIFE.NS', 'SBILIFE.NS', 'ICICIGI.NS', 'PAYTM.NS',
+    'POLICYBZR.NS', 'IRFC.NS', 'IREDA.NS', 'HUDCO.NS', 'L&TFH.NS',
+    'M&MFIN.NS', 'BAJAJHFL.NS', 'MAXFSL.NS', 'SBICARD.NS', 'BSE.NS', '360ONE.NS'
   ],
   energy: [
-    'RELIANCE.NS', 'NTPC.NS', 'POWERGRID.NS', 'TORNTPOWER.NS', 'JSW.NS',
-    'ADANIPOWER.NS', 'INDIGO.NS', 'OIL.NS', 'BPCL.NS', 'HPCL.NS'
+    'RELIANCE.NS', 'NTPC.NS', 'POWERGRID.NS', 'TATAPOWER.NS', 'ADANIPOWER.NS',
+    'ADANIGREEN.NS', 'ADANIENSOL.NS', 'ONGC.NS', 'IOC.NS', 'BPCL.NS',
+    'HPCL.NS', 'GAIL.NS', 'COALINDIA.NS', 'OIL.NS', 'IGL.NS',
+    'ATGL.NS', 'NTPCGREEN.NS', 'TORNTPOWER.NS', 'JSWENERGY.NS'
   ],
   pharma: [
-    'SUNPHARMA.NS', 'CIPLA.NS', 'DRHP.NS', 'AUROPHARMA.NS', 'LUPIN.NS',
-    'BIOCON.NS', 'GLENMARK.NS', 'DIVISLAB.NS', 'CDSL.NS', 'ALKEM.NS'
+    'SUNPHARMA.NS', 'DRREDDY.NS', 'CIPLA.NS', 'DIVISLAB.NS', 'LUPIN.NS',
+    'AUROPHARMA.NS', 'BIOCON.NS', 'ZYDUSLIFE.NS', 'APOLLOHOSP.NS', 'FORTIS.NS',
+    'MAXHEALTH.NS', 'GLENMARK.NS', 'ALKEM.NS', 'MANKIND.NS', 'TORNTPHARM.NS'
   ],
   fmcg: [
-    'NESTLEIND.NS', 'BRITANNIA.NS', 'MARICO.NS', 'HINDUNILVR.NS', 'GODREJCP.NS',
-    'COLPAL.NS', 'BARBEQUE.NS', 'PRATAGRP.NS'
+    'HINDUNILVR.NS', 'ITC.NS', 'NESTLEIND.NS', 'BRITANNIA.NS', 'DABUR.NS',
+    'MARICO.NS', 'COLPAL.NS', 'GODREJCP.NS', 'TATACONSUM.NS', 'VBL.NS',
+    'PATANJALI.NS', 'UNITDSPR.NS'
   ],
   metals: [
-    'TATASTEEL.NS', 'HINDALCO.NS', 'JSWSTEEL.NS', 'NATIONALUM.NS', 'JINDALSTEL.NS',
-    'VEDL.NS'
+    'TATASTEEL.NS', 'JSWSTEEL.NS', 'HINDALCO.NS', 'VEDL.NS', 'SAIL.NS',
+    'NMDC.NS', 'NATIONALUM.NS', 'HINDZINC.NS', 'JINDALSTEL.NS'
   ],
   realty: [
-    'DLF.NS', 'INDIABULLS.NS', 'OBEROI.NS', 'GPIL.NS', 'SUNTECK.NS',
-    'LODHA.NS'
+    'DLF.NS', 'GODREJPROP.NS', 'OBEROIREAL.NS', 'PRESTIGE.NS', 'PHOENIXLTD.NS', 'LODHA.NS'
+  ],
+  it: [
+    'TCS.NS', 'INFY.NS', 'WIPRO.NS', 'HCLTECH.NS', 'TECHM.NS',
+    'LTIM.NS', 'PERSISTENT.NS', 'MPHASIS.NS', 'COFORGE.NS', 'OFSS.NS',
+    'KPITTECH.NS', 'TATAELXSI.NS', 'TATATECH.NS'
+  ],
+  capital_goods: [
+    'ABB.NS', 'SIEMENS.NS', 'LT.NS', 'CUMMINSIND.NS', 'HAVELLS.NS',
+    'POLYCAB.NS', 'CGPOWER.NS', 'BEL.NS', 'BHEL.NS', 'HAL.NS',
+    'MAZDOCK.NS', 'KEI.NS', 'APLAPOLLO.NS', 'ASTRAL.NS', 'PREMIERENE.NS',
+    'WAREEENER.NS', 'ENRIN.NS'
+  ],
+  telecom: [
+    'BHARTIARTL.NS', 'IDEA.NS', 'INDUSTOWER.NS', 'TATACOMM.NS', 'BHARTIHEXA.NS'
+  ],
+  chemicals: [
+    'UPL.NS', 'SRF.NS', 'PIIND.NS', 'PIDILITIND.NS', 'COROMANDEL.NS', 'SOLARINDS.NS'
+  ],
+  consumer_durables: [
+    'TITAN.NS', 'VOLTAS.NS', 'HAVELLS.NS', 'DIXON.NS', 'BLUESTARCO.NS', 'KALYANKJIL.NS'
+  ],
+  construction: [
+    'ULTRACEMCO.NS', 'GRASIM.NS', 'AMBUJACEM.NS', 'ACC.NS', 'IRB.NS', 'RVNL.NS'
+  ],
+  hospitality: [
+    'INDHOTEL.NS', 'ITCHOTELS.NS', 'IRCTC.NS', 'JUBLFOOD.NS', 'DMART.NS',
+    'TRENT.NS', 'SWIGGY.NS', 'NYKAA.NS', 'ZOMATO.NS'
   ],
   us_stocks: [
-    'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NVDA', 'BRK-B', 'V', 'JPM'
+    'NVDA', 'AAPL', 'MSFT', 'AMZN', 'GOOGL', 'GOOG', 'META', 'BRCM', 'TSLA', 'BRK-B', 'WMT', 'LLY', 'JPM', 'XOM', 'V', 'JNJ', 'MU', 'MA', 'COST', 'ORCL', 'CVX', 'NFLX', 'ABBV', 'PLTR', 'BAC', 'PG', 'AMD', 'KO', 'HD', 'CAT', 'CSCO', 'GE', 'LRCX', 'AMAT', 'MRK', 'RTX', 'MS', 'PM', 'UNH', 'GS', 'WFC', 'TMUS', 'GEV', 'IBM', 'LIN', 'MCD', 'INTC', 'VZ', 'PEP', 'AXP', 'T', 'KLAC', 'C', 'AMGN', 'NEE', 'ABT', 'CRM', 'DIS', 'TMO', 'TJX', 'TXN', 'GILD', 'ISRG', 'SCHW', 'ANET', 'APH', 'COP', 'PFE', 'BA', 'UBER', 'DE', 'ADI', 'APP', 'BLK', 'LMT', 'HON', 'UNP', 'QCOM', 'ETN', 'BKNG', 'WELL', 'DHR', 'PANW', 'SYK', 'SPGI', 'LOW', 'INTU', 'CB', 'ACN', 'PGR', 'PLD', 'BMY', 'NOW', 'VRTX', 'PH', 'COF', 'MDT', 'HCA', 'CME', 'MCK', 'MO', 'GLW', 'SBUX', 'SNDK', 'SO', 'CMCSA', 'NEM', 'CRWD', 'BSX', 'CEG', 'DELL', 'ADBE', 'NOC', 'WDC', 'DUK', 'EQIX', 'GD', 'WM', 'HWM', 'STX', 'CVS', 'TT', 'ICE', 'WMB', 'BX', 'MMC', 'MAR', 'FDX', 'ADP', 'PWR', 'AMT', 'UPS', 'PNC', 'SNPS', 'KKR', 'USB', 'JCI', 'BK', 'CDNS', 'NKE', 'REGN', 'MCO', 'ABNB', 'SHW', 'MSI', 'FCX', 'EOG', 'MMM', 'ITW', 'CMI', 'ORLY', 'KMI', 'ECL', 'MNST', 'MDLZ', 'EMR', 'CTAS', 'VLO', 'RCL', 'CSX', 'PSX', 'SLB', 'AON', 'CI', 'MPC', 'ROST', 'CL', 'DASH', 'WBD', 'AEP', 'RSG', 'CRH', 'HLT', 'TDG', 'LHX', 'GM', 'APO', 'ELV', 'TRV', 'HOOD', 'COR', 'NSC', 'APD', 'FTNT', 'SPG', 'SRE', 'OXY', 'BKR', 'DLR', 'PCAR', 'TEL', 'O', 'OKE', 'AJG', 'AFL', 'TFC', 'CIEN', 'AZO', 'FANG', 'ALL'
   ]
 };
 
@@ -190,14 +214,14 @@ const getOpportunityRating = (stock: any): string => {
   return 'Hold';
 };
 
-// Utility function to format currency for Indian market
+// Utility function to format currency
 const formatIndianCurrency = (value: number): string => {
-  if (value >= 10000000) {
-    return `₹${(value / 10000000).toFixed(2)} Cr`;
-  } else if (value >= 100000) {
-    return `₹${(value / 100000).toFixed(2)} L`;
+  if (value >= 1000000000) {
+    return `$${(value / 1000000000).toFixed(2)}B`;
+  } else if (value >= 1000000) {
+    return `$${(value / 1000000).toFixed(2)}M`;
   } else {
-    return `₹${value.toLocaleString('en-IN')}`;
+    return `$${value.toLocaleString('en-US')}`;
   }
 };
 
