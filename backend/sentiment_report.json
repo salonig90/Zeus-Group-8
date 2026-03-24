@@ -1,0 +1,4037 @@
+{
+    "fast moving consumer goods": {
+        "stocks": {
+            "VBL.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "TATACONSUM.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "UNITDSPR.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "PATANJALI.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "NESTLEIND.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "MARICO.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "ITC.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "HINDUNILVR.NS": {
+                "overall_score": 0.0447,
+                "classification": "Neutral",
+                "confidence": 61,
+                "positive_count": 6,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 12,
+                "prediction": "Neutral"
+            },
+            "COLPAL.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "DABUR.NS": {
+                "overall_score": 0.0312,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 6,
+                "negative_count": 4,
+                "neutral_count": 4,
+                "total_headlines": 14,
+                "prediction": "Neutral"
+            },
+            "GODFRYPHLP.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "GODREJCP.NS": {
+                "overall_score": 0.0078,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Neutral"
+            },
+            "BRITANNIA.NS": {
+                "overall_score": 0.0134,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 4,
+                "neutral_count": 3,
+                "total_headlines": 12,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Consumer majors eye volume growth, EBITDA gains in FY27 as inflation eases",
+                "source": "ET FMCG",
+                "vader_score": 0.743,
+                "rule_boost": 0.3,
+                "combined_score": 0.5658,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.448,
+                    "negative": 0.0,
+                    "neutral": 0.552
+                }
+            },
+            {
+                "headline": "Accurate forecasting tough as currency shocks, FTA uncertainty, supply disruptions weigh Consumer chiefs",
+                "source": "ET FMCG",
+                "vader_score": -0.7845,
+                "rule_boost": 0.0,
+                "combined_score": -0.4707,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.497,
+                    "neutral": 0.503
+                }
+            },
+            {
+                "headline": "Hindustan Unilever eyes premium beauty boom with Rs 2,000 Cr outlay",
+                "source": "ET FMCG",
+                "vader_score": 0.5859,
+                "rule_boost": 0.25,
+                "combined_score": 0.4515,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.275,
+                    "negative": 0.0,
+                    "neutral": 0.725
+                }
+            },
+            {
+                "headline": "FMCG companies weigh shrinking pack sizes, hiking prices to absorb crude shock",
+                "source": "ET FMCG",
+                "vader_score": -0.743,
+                "rule_boost": 0.0,
+                "combined_score": -0.4458,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.387,
+                    "neutral": 0.613
+                }
+            },
+            {
+                "headline": "Dabur to acquire a minority stake in the luxury skincare D2C company RAS Beauty, for Rs 60 crore",
+                "source": "ET FMCG",
+                "vader_score": 0.5859,
+                "rule_boost": 0.0,
+                "combined_score": 0.3515,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.183,
+                    "negative": 0.0,
+                    "neutral": 0.817
+                }
+            },
+            {
+                "headline": "FMCG urban sales growth outpaces rural in 2025, overall expansion slows to 4.1%",
+                "source": "ET FMCG",
+                "vader_score": 0.3818,
+                "rule_boost": 0.3,
+                "combined_score": 0.3491,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.178,
+                    "negative": 0.0,
+                    "neutral": 0.822
+                }
+            },
+            {
+                "headline": "Consumer cos hike prices amid rising cost of Iran war",
+                "source": "ET FMCG",
+                "vader_score": -0.5994,
+                "rule_boost": 0.15,
+                "combined_score": -0.2996,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.302,
+                    "neutral": 0.698
+                }
+            },
+            {
+                "headline": "FMCG growth moderates in December quarter as GST transition impacts pricing and consumption",
+                "source": "ET FMCG",
+                "vader_score": 0.3818,
+                "rule_boost": 0.15,
+                "combined_score": 0.2891,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.178,
+                    "negative": 0.0,
+                    "neutral": 0.822
+                }
+            },
+            {
+                "headline": "FMCG firms' Q3 sales hit as GST cuts force supply, pricing tweaks",
+                "source": "ET FMCG",
+                "vader_score": -0.296,
+                "rule_boost": -0.1,
+                "combined_score": -0.2176,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.167,
+                    "neutral": 0.833
+                }
+            },
+            {
+                "headline": "Unilever to sharpen India play with premium & q-comm push",
+                "source": "ET FMCG",
+                "vader_score": 0.34,
+                "rule_boost": 0.0,
+                "combined_score": 0.204,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.211,
+                    "negative": 0.0,
+                    "neutral": 0.789
+                }
+            },
+            {
+                "headline": "FMCG prices rise up to 5% as GST relief ends, weak rupee and rising costs squeeze margins",
+                "source": "ET FMCG",
+                "vader_score": 0.0516,
+                "rule_boost": 0.2,
+                "combined_score": 0.111,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.148,
+                    "negative": 0.138,
+                    "neutral": 0.714
+                }
+            },
+            {
+                "headline": "GST authorities slap Rs 6.37 crore demand notice on Britannia",
+                "source": "ET FMCG",
+                "vader_score": 0.0258,
+                "rule_boost": 0.15,
+                "combined_score": 0.0755,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.144,
+                    "negative": 0.135,
+                    "neutral": 0.721
+                }
+            },
+            {
+                "headline": "P&G India HR Chief PM Srinivas exits insider Robin Thadathil to take over",
+                "source": "ET FMCG",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Longer winter pours cold water on summer loading of consumer companies",
+                "source": "ET FMCG",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Dabur appoints Hershey s Herjit Bhalla as India chief elevates Mohit Malhotra to global role",
+                "source": "ET FMCG",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "fast moving consumer goods",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 13,
+            "sources_used": [
+                "ET FMCG"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:14.526678",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "metals & mining": {
+        "stocks": {
+            "VEDL.NS": {
+                "overall_score": 0.0174,
+                "classification": "Neutral",
+                "confidence": 57,
+                "positive_count": 4,
+                "negative_count": 4,
+                "neutral_count": 4,
+                "total_headlines": 12,
+                "prediction": "Neutral"
+            },
+            "TATASTEEL.NS": {
+                "overall_score": 0.0181,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 3,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 8,
+                "prediction": "Neutral"
+            },
+            "SAIL.NS": {
+                "overall_score": 0.0542,
+                "classification": "Mildly Bullish",
+                "confidence": 61,
+                "positive_count": 4,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 9,
+                "prediction": "Bullish"
+            },
+            "NMDC.NS": {
+                "overall_score": 0.0181,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 3,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 8,
+                "prediction": "Neutral"
+            },
+            "NATIONALUM.NS": {
+                "overall_score": 0.0181,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 3,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 8,
+                "prediction": "Neutral"
+            },
+            "JSWSTEEL.NS": {
+                "overall_score": 0.0181,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 3,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 8,
+                "prediction": "Neutral"
+            },
+            "JINDALSTEL.NS": {
+                "overall_score": 0.0542,
+                "classification": "Mildly Bullish",
+                "confidence": 61,
+                "positive_count": 4,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 9,
+                "prediction": "Bullish"
+            },
+            "HINDZINC.NS": {
+                "overall_score": 0.0181,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 3,
+                "negative_count": 3,
+                "neutral_count": 2,
+                "total_headlines": 8,
+                "prediction": "Neutral"
+            },
+            "HINDALCO.NS": {
+                "overall_score": -0.0698,
+                "classification": "Mildly Bearish",
+                "confidence": 63,
+                "positive_count": 3,
+                "negative_count": 6,
+                "neutral_count": 2,
+                "total_headlines": 11,
+                "prediction": "Bearish"
+            },
+            "ADANIENT.NS": {
+                "overall_score": 0.0432,
+                "classification": "Neutral",
+                "confidence": 59,
+                "positive_count": 4,
+                "negative_count": 3,
+                "neutral_count": 3,
+                "total_headlines": 10,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Centre puts 19 critical mineral mines on the block",
+                "source": "ET Metals",
+                "vader_score": -0.6369,
+                "rule_boost": 0.0,
+                "combined_score": -0.3821,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.426,
+                    "neutral": 0.574
+                }
+            },
+            {
+                "headline": "Hindalco halts production of extruded aluminium products due to Iran war, notice says",
+                "source": "ET Metals",
+                "vader_score": -0.5994,
+                "rule_boost": 0.0,
+                "combined_score": -0.3596,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.245,
+                    "neutral": 0.755
+                }
+            },
+            {
+                "headline": "Indian aluminium producers seek RoDTEP relief to stay competitive",
+                "source": "ET Metals",
+                "vader_score": 0.5859,
+                "rule_boost": 0.0,
+                "combined_score": 0.3515,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.407,
+                    "negative": 0.0,
+                    "neutral": 0.593
+                }
+            },
+            {
+                "headline": "Jindal Steel wins auction for another Odisha iron ore mine with 38-mn-tonne reserves",
+                "source": "ET Metals",
+                "vader_score": 0.5719,
+                "rule_boost": 0.0,
+                "combined_score": 0.3431,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.236,
+                    "negative": 0.0,
+                    "neutral": 0.764
+                }
+            },
+            {
+                "headline": "Hindalco expects rise in exports as war disrupts aluminium supply",
+                "source": "ET Metals",
+                "vader_score": -0.5994,
+                "rule_boost": 0.15,
+                "combined_score": -0.2996,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.302,
+                    "neutral": 0.698
+                }
+            },
+            {
+                "headline": "Government to launch 7th critical mineral auction tranche to boost resource security",
+                "source": "ET Metals",
+                "vader_score": 0.4215,
+                "rule_boost": 0.1,
+                "combined_score": 0.2929,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.311,
+                    "negative": 0.14,
+                    "neutral": 0.549
+                }
+            },
+            {
+                "headline": "India takes rare cargo of Australia's BHP iron ore banned by China",
+                "source": "ET Metals",
+                "vader_score": -0.4588,
+                "rule_boost": 0.0,
+                "combined_score": -0.2753,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.214,
+                    "neutral": 0.786
+                }
+            },
+            {
+                "headline": "Hindalco denies extrusions operations halt report says overall operations largely unaffected",
+                "source": "ET Metals",
+                "vader_score": -0.4215,
+                "rule_boost": 0.0,
+                "combined_score": -0.2529,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.219,
+                    "neutral": 0.781
+                }
+            },
+            {
+                "headline": "NCLAT adjourns hearing on Vedanta petition to Tuesday, asks to implead Adani as party",
+                "source": "ET Metals",
+                "vader_score": 0.4019,
+                "rule_boost": 0.0,
+                "combined_score": 0.2411,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.172,
+                    "negative": 0.0,
+                    "neutral": 0.828
+                }
+            },
+            {
+                "headline": "Concessional diesel No relief for Vedanta",
+                "source": "ET Metals",
+                "vader_score": -0.3724,
+                "rule_boost": 0.0,
+                "combined_score": -0.2234,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.338,
+                    "neutral": 0.662
+                }
+            },
+            {
+                "headline": "India s coal imports dip 4.2% as domestic production rises amid global price surge",
+                "source": "ET Metals",
+                "vader_score": 0.0,
+                "rule_boost": 0.35,
+                "combined_score": 0.14,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Centre auctions record 200 mineral blocks in FY26, highest ever",
+                "source": "ET Metals",
+                "vader_score": -0.2263,
+                "rule_boost": 0.0,
+                "combined_score": -0.1358,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.174,
+                    "neutral": 0.826
+                }
+            },
+            {
+                "headline": "India to invite bids for Rs 7,280 crore rare earth magnet manufacturing scheme on March 20",
+                "source": "ET Metals",
+                "vader_score": 0.1531,
+                "rule_boost": 0.0,
+                "combined_score": 0.0919,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.096,
+                    "negative": 0.0,
+                    "neutral": 0.904
+                }
+            },
+            {
+                "headline": "UCIL plans uranium mining plants in Rajasthan, Chhattisgarh projects await clearances",
+                "source": "ET Metals",
+                "vader_score": 0.1027,
+                "rule_boost": 0.0,
+                "combined_score": 0.0616,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.123,
+                    "negative": 0.0,
+                    "neutral": 0.877
+                }
+            },
+            {
+                "headline": "Vedanta moves NCLAT, challenges NCLT nod to Adani's bid for acquiring Jaiprakash Associates",
+                "source": "ET Metals",
+                "vader_score": 0.0772,
+                "rule_boost": 0.0,
+                "combined_score": 0.0463,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.098,
+                    "negative": 0.0,
+                    "neutral": 0.902
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "metals & mining",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 10,
+            "sources_used": [
+                "ET Metals"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:17.602344",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "consumer services": {
+        "stocks": {
+            "VMM.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "SWIGGY.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "TRENT.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "JUBLFOOD.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "ITCHOTELS.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "INDHOTEL.NS": {
+                "overall_score": -0.1086,
+                "classification": "Mildly Bearish",
+                "confidence": 66,
+                "positive_count": 4,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 16,
+                "prediction": "Bearish"
+            },
+            "IRCTC.NS": {
+                "overall_score": -0.1086,
+                "classification": "Mildly Bearish",
+                "confidence": 66,
+                "positive_count": 4,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 16,
+                "prediction": "Bearish"
+            },
+            "NAUKRI.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "ETERNAL.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "NYKAA.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            },
+            "DMART.NS": {
+                "overall_score": -0.1277,
+                "classification": "Mildly Bearish",
+                "confidence": 68,
+                "positive_count": 3,
+                "negative_count": 10,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bearish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Iran-Israel War Difficult to supply commercial cylinders to hotels for 7 10 days, says K taka minister",
+                "source": "ET Hospitality",
+                "vader_score": -0.7506,
+                "rule_boost": 0.0,
+                "combined_score": -0.4504,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.299,
+                    "neutral": 0.701
+                }
+            },
+            {
+                "headline": "Iran-Israel War LPG shortage forces restaurants to improvise with electric appliances, microwaves, and firewood across India",
+                "source": "ET Hospitality",
+                "vader_score": -0.7096,
+                "rule_boost": 0.0,
+                "combined_score": -0.4258,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.296,
+                    "neutral": 0.704
+                }
+            },
+            {
+                "headline": "The Oberoi Rajgarh Palace recognised on TIME s World s Greatest Places 2026 list",
+                "source": "ET Hospitality",
+                "vader_score": 0.6369,
+                "rule_boost": 0.0,
+                "combined_score": 0.3821,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.244,
+                    "negative": 0.0,
+                    "neutral": 0.756
+                }
+            },
+            {
+                "headline": "JSM Group rejects Hard Rock Cafe closure claim, says outlets in India will continue",
+                "source": "ET Hospitality",
+                "vader_score": -0.5574,
+                "rule_boost": 0.0,
+                "combined_score": -0.3344,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.277,
+                    "neutral": 0.723
+                }
+            },
+            {
+                "headline": "Fading flames, rising heat LPG crisis leaves restaurants and staff on edge",
+                "source": "ET Hospitality",
+                "vader_score": -0.6249,
+                "rule_boost": 0.15,
+                "combined_score": -0.3149,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.272,
+                    "neutral": 0.728
+                }
+            },
+            {
+                "headline": "Hospitality industry bodies welcome govt decision to allocate 20% of average monthly commercial LPG requirement to hotels, restaurants",
+                "source": "ET Hospitality",
+                "vader_score": 0.4588,
+                "rule_boost": 0.0,
+                "combined_score": 0.2753,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.15,
+                    "negative": 0.0,
+                    "neutral": 0.85
+                }
+            },
+            {
+                "headline": "Roti, dosa & pooris disappear from menus across India as LPG shortage hits eateries",
+                "source": "ET Hospitality",
+                "vader_score": -0.4404,
+                "rule_boost": 0.0,
+                "combined_score": -0.2642,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.245,
+                    "neutral": 0.755
+                }
+            },
+            {
+                "headline": "LPG crisis Sales of instant food options, frozen snacks surge 20 per cent",
+                "source": "ET Hospitality",
+                "vader_score": -0.6249,
+                "rule_boost": 0.3,
+                "combined_score": -0.2549,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.255,
+                    "neutral": 0.745
+                }
+            },
+            {
+                "headline": "Too Much On Their Plate Caterers scramble as LPG cylinders run out amid West Asia conflict",
+                "source": "ET Hospitality",
+                "vader_score": -0.3182,
+                "rule_boost": 0.0,
+                "combined_score": -0.1909,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.133,
+                    "neutral": 0.867
+                }
+            },
+            {
+                "headline": "How technology is helping restaurants scale regional Indian cuisine while maintaining consistent taste",
+                "source": "ET Hospitality",
+                "vader_score": 0.296,
+                "rule_boost": 0.0,
+                "combined_score": 0.1776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.155,
+                    "negative": 0.0,
+                    "neutral": 0.845
+                }
+            },
+            {
+                "headline": "LPG shortage forces around 40% of restaurants in Kerala to shut down",
+                "source": "ET Hospitality",
+                "vader_score": -0.25,
+                "rule_boost": -0.05,
+                "combined_score": -0.17,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.154,
+                    "neutral": 0.846
+                }
+            },
+            {
+                "headline": "LPG shortage leaves Delhi caterers chasing cylinders, turning to alternatives",
+                "source": "ET Hospitality",
+                "vader_score": -0.25,
+                "rule_boost": 0.0,
+                "combined_score": -0.15,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.182,
+                    "neutral": 0.818
+                }
+            },
+            {
+                "headline": "LPG shortage Restaurant orders see improvement, says magicpin",
+                "source": "ET Hospitality",
+                "vader_score": 0.25,
+                "rule_boost": 0.0,
+                "combined_score": 0.15,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.273,
+                    "negative": 0.182,
+                    "neutral": 0.545
+                }
+            },
+            {
+                "headline": "Bengaluru hotel owner writes to PM Modi flagging economic impact on women entrepreneurs amid reported LPG shortage",
+                "source": "ET Hospitality",
+                "vader_score": -0.25,
+                "rule_boost": 0.0,
+                "combined_score": -0.15,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.111,
+                    "neutral": 0.889
+                }
+            },
+            {
+                "headline": "LPG price surge cuts food orders, shrinks delivery rider earnings",
+                "source": "ET Hospitality",
+                "vader_score": -0.296,
+                "rule_boost": 0.4,
+                "combined_score": -0.0176,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.196,
+                    "neutral": 0.804
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "consumer services",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 11,
+            "sources_used": [
+                "ET Hospitality"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:19.660459",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "telecommunication": {
+        "stocks": {
+            "IDEA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TATACOMM.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "INDUSTOWER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BHARTIARTL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BHARTIHEXA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "telecommunication",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 5,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:11.990125",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "consumer durables": {
+        "stocks": {
+            "VOLTAS.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "TITAN.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "KALYANKJIL.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "DIXON.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "HAVELLS.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "BLUESTARCO.NS": {
+                "overall_score": 0.0936,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 2,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "ASIANPAINT.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Suzlon Energy shares jump 3% as firm wins sixth repeat order for 100 MW from GAIL",
+                "source": "ET US Markets",
+                "vader_score": 0.7906,
+                "rule_boost": 0.2,
+                "combined_score": 0.5544,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.381,
+                    "negative": 0.0,
+                    "neutral": 0.619
+                }
+            },
+            {
+                "headline": "Sensex jumps over 650 points, Nifty nears 22,700 4 factors behind today s D-Street rally",
+                "source": "ET US Markets",
+                "vader_score": 0.4019,
+                "rule_boost": 0.45,
+                "combined_score": 0.4211,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.162,
+                    "negative": 0.0,
+                    "neutral": 0.838
+                }
+            },
+            {
+                "headline": "Silver price crashes 51%, plunges Rs 2.24 lakh from record peak! Should you catch this falling knife?",
+                "source": "ET US Markets",
+                "vader_score": -0.2598,
+                "rule_boost": -0.5,
+                "combined_score": -0.3559,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.113,
+                    "neutral": 0.887
+                }
+            },
+            {
+                "headline": "Muthoot Finance among 6 F&O stocks with a sharp rise in futures open interest",
+                "source": "ET US Markets",
+                "vader_score": 0.4588,
+                "rule_boost": 0.15,
+                "combined_score": 0.3353,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.188,
+                    "negative": 0.0,
+                    "neutral": 0.812
+                }
+            },
+            {
+                "headline": "Vedanta shares jump 3% after company announces Rs 11 interim dividend",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.35,
+                "combined_score": 0.3176,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.18,
+                    "negative": 0.0,
+                    "neutral": 0.82
+                }
+            },
+            {
+                "headline": "The obvious risk no one is talking about in the stock market now",
+                "source": "ET US Markets",
+                "vader_score": -0.5106,
+                "rule_boost": 0.0,
+                "combined_score": -0.3064,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.281,
+                    "neutral": 0.719
+                }
+            },
+            {
+                "headline": "Eternal shares to rally till Rs 415 after platform fee hike? What Elara said",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.145,
+                    "negative": 0.0,
+                    "neutral": 0.855
+                }
+            },
+            {
+                "headline": "AI firm Fractal Analytics shares rally 4% as Goldman Sachs, Morgan Stanley initiate coverage. Check details",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.128,
+                    "negative": 0.0,
+                    "neutral": 0.872
+                }
+            },
+            {
+                "headline": "L&T shares rebound 3% as Donald Trump signals potential end to war. Why does it matter for the construction major?",
+                "source": "ET US Markets",
+                "vader_score": -0.3818,
+                "rule_boost": 0.0,
+                "combined_score": -0.2291,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.136,
+                    "negative": 0.161,
+                    "neutral": 0.702
+                }
+            },
+            {
+                "headline": "HPCL, BPCL, IOC shares rise 4% as oil eases from recent highs after Trump delays Iran strikes",
+                "source": "ET US Markets",
+                "vader_score": 0.25,
+                "rule_boost": 0.15,
+                "combined_score": 0.21,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.214,
+                    "negative": 0.119,
+                    "neutral": 0.667
+                }
+            },
+            {
+                "headline": "Both Nifty bulls and bears left guessing as Iran war trajectory gives mixed signals to investors",
+                "source": "ET US Markets",
+                "vader_score": -0.296,
+                "rule_boost": 0.0,
+                "combined_score": -0.1776,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.131,
+                    "negative": 0.189,
+                    "neutral": 0.68
+                }
+            },
+            {
+                "headline": "HDFC Bank stock selloff halts after 4 days, rises 3%. What's happening?",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": -0.3,
+                "combined_score": -0.12,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Nomura upgrades Kotak Mahindra Bank, calls ICICI Bank preferred compounder. Here's why",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.25,
+                "combined_score": 0.1,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Vedanta, Coal India among 10 stocks with highest dividend yield of up to 6.3%. Check full list",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.15,
+                "combined_score": 0.06,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Upcoming IPOs 10 public issues that have received Sebi nod & can launch soon",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "consumer durables",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 7,
+            "sources_used": [
+                "ET US Markets"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:19.154077",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "capital goods": {
+        "stocks": {
+            "WAAREEENER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SUZLON.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ENRIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SIEMENS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SUPREMEIND.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "POLYCAB.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "PREMIERENE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MAZDOCK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "KEI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "POWERINDIA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HAL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "CGPOWER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "COCHINSHIP.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "CUMMINSIND.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BHEL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ABB.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "APLAPOLLO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ASHOKLEY.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ASTRAL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BDL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BEL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "capital goods",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 21,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:15.731350",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "information technology": {
+        "stocks": {
+            "WIPRO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TCS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TATAELXSI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TATATECH.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TECHM.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "PERSISTENT.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MPHASIS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "OFSS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "KPITTECH.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "LTM.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "INFY.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "COFORGE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HCLTECH.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "information technology",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 13,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:06.270731",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "financial services": {
+        "stocks": {
+            "YESBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "UNIONBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SBICARD.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SBILIFE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SHRIRAMFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SBIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "PFC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "PNB.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "RECLTD.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MFSL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MOTILALOFS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MUTHOOTFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "PAYTM.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "POLICYBZR.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "KOTAKBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "LTF.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "LICHSGFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "LICI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "M&MFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ICICIBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ICICIGI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "IDFCFIRSTB.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "INDIANB.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "IRFC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "IREDA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "INDUSINDBK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "JIOFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HUDCO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "CANBK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "CHOLAFIN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "FEDERALBNK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HDFCAMC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HDFCBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HDFCLIFE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "360ONE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "AUBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ABCAPITAL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "AXISBANK.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BSE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BAJFINANCE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BAJAJFINSV.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BAJAJHLDNG.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BAJAJHFL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BANKBARODA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BANKINDIA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "financial services",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 45,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:15.201557",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "health care": {
+        "stocks": {
+            "ZYDUSLIFE.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "TORNTPHARM.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "SUNPHARMA.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "MAXHEALTH.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "LUPIN.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "MANKIND.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "CIPLA.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "DIVISLAB.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "DRREDDY.NS": {
+                "overall_score": 0.0206,
+                "classification": "Neutral",
+                "confidence": 57,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 4,
+                "total_headlines": 14,
+                "prediction": "Neutral"
+            },
+            "FORTIS.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "GLENMARK.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "BIOCON.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "ALKEM.NS": {
+                "overall_score": 0.0219,
+                "classification": "Neutral",
+                "confidence": 57,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 5,
+                "total_headlines": 15,
+                "prediction": "Neutral"
+            },
+            "APOLLOHOSP.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            },
+            "AUROPHARMA.NS": {
+                "overall_score": 0.0191,
+                "classification": "Neutral",
+                "confidence": 58,
+                "positive_count": 5,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 13,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "A blockbuster unleashed What happens when a big fat business explodes?",
+                "source": "ET Pharma",
+                "vader_score": 0.5994,
+                "rule_boost": 0.0,
+                "combined_score": 0.3596,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.281,
+                    "negative": 0.0,
+                    "neutral": 0.719
+                }
+            },
+            {
+                "headline": "India is well positioned to attract future investments Patrik Jonsson, President, Lilly International",
+                "source": "ET Pharma",
+                "vader_score": 0.5574,
+                "rule_boost": 0.0,
+                "combined_score": 0.3344,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.295,
+                    "negative": 0.0,
+                    "neutral": 0.705
+                }
+            },
+            {
+                "headline": "India is well positioned to attract future investments, says Eli Lilly's Patrik Jonsson",
+                "source": "ET Pharma",
+                "vader_score": 0.5574,
+                "rule_boost": 0.0,
+                "combined_score": 0.3344,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.295,
+                    "negative": 0.0,
+                    "neutral": 0.705
+                }
+            },
+            {
+                "headline": "DCGI intensifies crackdown on GLP-1 drug misuse, sales and misleading ads",
+                "source": "ET Pharma",
+                "vader_score": -0.4019,
+                "rule_boost": -0.05,
+                "combined_score": -0.2611,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.213,
+                    "neutral": 0.787
+                }
+            },
+            {
+                "headline": "We are discovery rich, but development poor",
+                "source": "ET Pharma",
+                "vader_score": -0.431,
+                "rule_boost": 0.0,
+                "combined_score": -0.2586,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.201,
+                    "negative": 0.362,
+                    "neutral": 0.437
+                }
+            },
+            {
+                "headline": "Price alone won't push weight-loss, diabetes drug semaglutide sales Doctors",
+                "source": "ET Pharma",
+                "vader_score": -0.25,
+                "rule_boost": -0.15,
+                "combined_score": -0.21,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.182,
+                    "neutral": 0.818
+                }
+            },
+            {
+                "headline": "India s drug regulator flags 90 unapproved FDCs, directs states to take action",
+                "source": "ET Pharma",
+                "vader_score": -0.34,
+                "rule_boost": 0.0,
+                "combined_score": -0.204,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.167,
+                    "neutral": 0.833
+                }
+            },
+            {
+                "headline": "India tightens grip on GLP-1 supply chain amid misuse concerns, expands crackdown on unapproved drugs",
+                "source": "ET Pharma",
+                "vader_score": -0.25,
+                "rule_boost": -0.05,
+                "combined_score": -0.17,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.083,
+                    "negative": 0.143,
+                    "neutral": 0.774
+                }
+            },
+            {
+                "headline": "Novo to track generic surge as semaglutide goes off patent",
+                "source": "ET Pharma",
+                "vader_score": 0.0,
+                "rule_boost": 0.3,
+                "combined_score": 0.12,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Rs 450 to Rs 4,200 Drugmakers rush in to win the business of losing weight",
+                "source": "ET Pharma",
+                "vader_score": 0.296,
+                "rule_boost": -0.15,
+                "combined_score": 0.1176,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.196,
+                    "negative": 0.134,
+                    "neutral": 0.67
+                }
+            },
+            {
+                "headline": "Alkem Laboratories launches semaglutide in India at Rs 450 per week, eyes booming weight-loss market",
+                "source": "ET Pharma",
+                "vader_score": 0.0,
+                "rule_boost": 0.2,
+                "combined_score": 0.08,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "GST refund stress MedTech sector flags cash crunch, seeks relief",
+                "source": "ET Pharma",
+                "vader_score": 0.0772,
+                "rule_boost": 0.0,
+                "combined_score": 0.0463,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.223,
+                    "negative": 0.201,
+                    "neutral": 0.576
+                }
+            },
+            {
+                "headline": "GLP-1 rush Pharma, food firms eye tie-ups for weight-loss boom",
+                "source": "ET Pharma",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Dr. Reddy s Lab launches India s first DCGI-approved Semaglutide injection for Type 2 Diabetes",
+                "source": "ET Pharma",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Indian drugmakers flood market with cheaper versions of Novo's Ozempic, Wegovy",
+                "source": "ET Pharma",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "health care",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 15,
+            "sources_used": [
+                "ET Pharma"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:18.507181",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "automobile and auto components": {
+        "stocks": {
+            "TVSMOTOR.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TMPV.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TIINDIA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MOTHERSON.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "SONACOMS.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MRF.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "M&M.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "MARUTI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HYUNDAI.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "EICHERMOT.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "EXIDEIND.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HEROMOTOCO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BOSCHLTD.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BAJAJ-AUTO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BHARATFORG.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "automobile and auto components",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 15,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:20.214135",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "power": {
+        "stocks": {
+            "TATAPOWER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "TORNTPOWER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "POWERGRID.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "NHPC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "NTPCGREEN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "NTPC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "JSWENERGY.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ADANIENSOL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ADANIGREEN.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ADANIPOWER.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "power",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 10,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:16.894120",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "chemicals": {
+        "stocks": {
+            "UPL.NS": {
+                "overall_score": 0.2792,
+                "classification": "Strong Bullish",
+                "confidence": 81,
+                "positive_count": 2,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 2,
+                "prediction": "Bullish"
+            },
+            "SRF.NS": {
+                "overall_score": 0.3091,
+                "classification": "Strong Bullish",
+                "confidence": 82,
+                "positive_count": 2,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 2,
+                "prediction": "Bullish"
+            },
+            "SOLARINDS.NS": {
+                "overall_score": 0.3944,
+                "classification": "Strong Bullish",
+                "confidence": 85,
+                "positive_count": 1,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 1,
+                "prediction": "Bullish"
+            },
+            "PIDILITIND.NS": {
+                "overall_score": 0.3736,
+                "classification": "Strong Bullish",
+                "confidence": 84,
+                "positive_count": 2,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 2,
+                "prediction": "Bullish"
+            },
+            "PIIND.NS": {
+                "overall_score": 0.3736,
+                "classification": "Strong Bullish",
+                "confidence": 84,
+                "positive_count": 2,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 2,
+                "prediction": "Bullish"
+            },
+            "COROMANDEL.NS": {
+                "overall_score": 0.3944,
+                "classification": "Strong Bullish",
+                "confidence": 85,
+                "positive_count": 1,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 1,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Chemical sector outlook remains positive on export potential",
+                "source": "Market Analysis",
+                "vader_score": 0.5574,
+                "rule_boost": 0.15,
+                "combined_score": 0.3944,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.34,
+                    "negative": 0.0,
+                    "neutral": 0.66
+                }
+            },
+            {
+                "headline": "Pidilite Industries reports strong demand for construction chemicals",
+                "source": "Market Analysis",
+                "vader_score": 0.4215,
+                "rule_boost": 0.25,
+                "combined_score": 0.3529,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.306,
+                    "negative": 0.139,
+                    "neutral": 0.556
+                }
+            },
+            {
+                "headline": "SRF chemicals business benefits from high refrigerant demand",
+                "source": "Market Analysis",
+                "vader_score": 0.2732,
+                "rule_boost": 0.15,
+                "combined_score": 0.2239,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.257,
+                    "negative": 0.149,
+                    "neutral": 0.594
+                }
+            },
+            {
+                "headline": "UPL expands agrochemical portfolio with sustainable solutions",
+                "source": "Market Analysis",
+                "vader_score": 0.2732,
+                "rule_boost": 0.0,
+                "combined_score": 0.1639,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.383,
+                    "negative": 0.0,
+                    "neutral": 0.617
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "chemicals",
+            "total_headlines_scraped": 4,
+            "total_analyzed": 4,
+            "stocks_analyzed": 6,
+            "sources_used": [
+                "Market Analysis"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:07.613137",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "construction materials": {
+        "stocks": {
+            "ULTRACEMCO.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "SHREECEM.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "GRASIM.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "ACC.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "AMBUJACEM.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Suzlon Energy shares jump 3% as firm wins sixth repeat order for 100 MW from GAIL",
+                "source": "ET US Markets",
+                "vader_score": 0.7906,
+                "rule_boost": 0.2,
+                "combined_score": 0.5544,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.381,
+                    "negative": 0.0,
+                    "neutral": 0.619
+                }
+            },
+            {
+                "headline": "Sensex jumps over 650 points, Nifty nears 22,700 4 factors behind today s D-Street rally",
+                "source": "ET US Markets",
+                "vader_score": 0.4019,
+                "rule_boost": 0.45,
+                "combined_score": 0.4211,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.162,
+                    "negative": 0.0,
+                    "neutral": 0.838
+                }
+            },
+            {
+                "headline": "Silver price crashes 51%, plunges Rs 2.24 lakh from record peak! Should you catch this falling knife?",
+                "source": "ET US Markets",
+                "vader_score": -0.2598,
+                "rule_boost": -0.5,
+                "combined_score": -0.3559,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.113,
+                    "neutral": 0.887
+                }
+            },
+            {
+                "headline": "Muthoot Finance among 6 F&O stocks with a sharp rise in futures open interest",
+                "source": "ET US Markets",
+                "vader_score": 0.4588,
+                "rule_boost": 0.15,
+                "combined_score": 0.3353,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.188,
+                    "negative": 0.0,
+                    "neutral": 0.812
+                }
+            },
+            {
+                "headline": "Vedanta shares jump 3% after company announces Rs 11 interim dividend",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.35,
+                "combined_score": 0.3176,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.18,
+                    "negative": 0.0,
+                    "neutral": 0.82
+                }
+            },
+            {
+                "headline": "The obvious risk no one is talking about in the stock market now",
+                "source": "ET US Markets",
+                "vader_score": -0.5106,
+                "rule_boost": 0.0,
+                "combined_score": -0.3064,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.281,
+                    "neutral": 0.719
+                }
+            },
+            {
+                "headline": "Eternal shares to rally till Rs 415 after platform fee hike? What Elara said",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.145,
+                    "negative": 0.0,
+                    "neutral": 0.855
+                }
+            },
+            {
+                "headline": "AI firm Fractal Analytics shares rally 4% as Goldman Sachs, Morgan Stanley initiate coverage. Check details",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.128,
+                    "negative": 0.0,
+                    "neutral": 0.872
+                }
+            },
+            {
+                "headline": "L&T shares rebound 3% as Donald Trump signals potential end to war. Why does it matter for the construction major?",
+                "source": "ET US Markets",
+                "vader_score": -0.3818,
+                "rule_boost": 0.0,
+                "combined_score": -0.2291,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.136,
+                    "negative": 0.161,
+                    "neutral": 0.702
+                }
+            },
+            {
+                "headline": "HPCL, BPCL, IOC shares rise 4% as oil eases from recent highs after Trump delays Iran strikes",
+                "source": "ET US Markets",
+                "vader_score": 0.25,
+                "rule_boost": 0.15,
+                "combined_score": 0.21,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.214,
+                    "negative": 0.119,
+                    "neutral": 0.667
+                }
+            },
+            {
+                "headline": "Both Nifty bulls and bears left guessing as Iran war trajectory gives mixed signals to investors",
+                "source": "ET US Markets",
+                "vader_score": -0.296,
+                "rule_boost": 0.0,
+                "combined_score": -0.1776,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.131,
+                    "negative": 0.189,
+                    "neutral": 0.68
+                }
+            },
+            {
+                "headline": "HDFC Bank stock selloff halts after 4 days, rises 3%. What's happening?",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": -0.3,
+                "combined_score": -0.12,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Nomura upgrades Kotak Mahindra Bank, calls ICICI Bank preferred compounder. Here's why",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.25,
+                "combined_score": 0.1,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Vedanta, Coal India among 10 stocks with highest dividend yield of up to 6.3%. Check full list",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.15,
+                "combined_score": 0.06,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Upcoming IPOs 10 public issues that have received Sebi nod & can launch soon",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "construction materials",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 5,
+            "sources_used": [
+                "ET US Markets"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:16.254093",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "oil gas and consumable fuels": {
+        "stocks": {
+            "RELIANCE.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ONGC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "OIL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "IOC.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "IGL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "HINDPETRO.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "COALINDIA.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "GAIL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "BPCL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            },
+            "ATGL.NS": {
+                "overall_score": 0,
+                "classification": "Neutral",
+                "confidence": 50,
+                "positive_count": 0,
+                "negative_count": 0,
+                "neutral_count": 0,
+                "total_headlines": 0,
+                "prediction": "Neutral"
+            }
+        },
+        "headlines": [],
+        "metadata": {
+            "sector": "oil gas and consumable fuels",
+            "total_headlines_scraped": 0,
+            "total_analyzed": 0,
+            "stocks_analyzed": 10,
+            "sources_used": [],
+            "analysis_timestamp": "2026-03-24T11:57:17.987908",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "realty": {
+        "stocks": {
+            "PHOENIXLTD.NS": {
+                "overall_score": 0.0596,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 12,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "PRESTIGE.NS": {
+                "overall_score": 0.0596,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 12,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "OBEROIRLTY.NS": {
+                "overall_score": 0.0596,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 12,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "LODHA.NS": {
+                "overall_score": 0.0559,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 13,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "DLF.NS": {
+                "overall_score": 0.0596,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 12,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "GODREJPROP.NS": {
+                "overall_score": 0.0559,
+                "classification": "Mildly Bullish",
+                "confidence": 68,
+                "positive_count": 2,
+                "negative_count": 1,
+                "neutral_count": 13,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Brigade Enterprises expands annuity portfolio, explores new asset classes for growth",
+                "source": "ET Real Estate",
+                "vader_score": 0.6705,
+                "rule_boost": 0.3,
+                "combined_score": 0.5223,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.448,
+                    "negative": 0.0,
+                    "neutral": 0.552
+                }
+            },
+            {
+                "headline": "Embassy REIT eyes 12 13 mn sq ft acquisitions to scale portfolio targets yield-accretive growth",
+                "source": "ET Real Estate",
+                "vader_score": 0.3818,
+                "rule_boost": 0.25,
+                "combined_score": 0.3291,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.157,
+                    "negative": 0.0,
+                    "neutral": 0.843
+                }
+            },
+            {
+                "headline": "Rising crude prices spark cost concerns for real estate sector",
+                "source": "ET Real Estate",
+                "vader_score": -0.4215,
+                "rule_boost": 0.15,
+                "combined_score": -0.1929,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.14,
+                    "negative": 0.272,
+                    "neutral": 0.588
+                }
+            },
+            {
+                "headline": "KIADB orders resumption of Bengaluru land held by Embassy subsidiary company to explore legal remedies",
+                "source": "ET Real Estate",
+                "vader_score": 0.128,
+                "rule_boost": 0.0,
+                "combined_score": 0.0768,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.097,
+                    "negative": 0.0,
+                    "neutral": 0.903
+                }
+            },
+            {
+                "headline": "NCLT allows withdrawal of insolvency proceedings against ATS group project",
+                "source": "ET Real Estate",
+                "vader_score": 0.0258,
+                "rule_boost": 0.15,
+                "combined_score": 0.0755,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.109,
+                    "negative": 0.0,
+                    "neutral": 0.891
+                }
+            },
+            {
+                "headline": "India among key APAC markets as global real estate investment volumes rise 8.2% in 2025 Colliers",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.15,
+                "combined_score": 0.06,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "TARC revises sales potential of Gurugram project with acquisition of adjoining land",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "India's 17 small towns house 575 co-working centres to cater managed office space demand Report",
+                "source": "ET Real Estate",
+                "vader_score": -0.128,
+                "rule_boost": 0.15,
+                "combined_score": -0.0168,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.097,
+                    "neutral": 0.903
+                }
+            },
+            {
+                "headline": "Sattva Targets Rs 8600 crore GDV from Sattva City in Bengaluru",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "ASK Property Fund exits Mahagun Group s Noida project",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Manufacturing push drives property developers to build industrial townships",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Realty majors Godrej and Lodha target Rs 1 lakh crore in new projects",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "India's industrial, warehousing stock crosses half-billion sq ft across 8 cities Knight Frank",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Tathastu Realty to invest Rs 500 crore to build affordable housing project at Haryana's Rewari",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "IndiQube signs 1,140-seat GCC deal in Pune",
+                "source": "ET Real Estate",
+                "vader_score": 0.0,
+                "rule_boost": 0.0,
+                "combined_score": 0.0,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "realty",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 6,
+            "sources_used": [
+                "ET Real Estate"
+            ],
+            "analysis_timestamp": "2026-03-24T11:57:08.300883",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "constructions": {
+        "stocks": {
+            "RVNL.NS": {
+                "overall_score": 0.1019,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 4,
+                "neutral_count": 3,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            },
+            "LT.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            },
+            "IRB.NS": {
+                "overall_score": 0.1019,
+                "classification": "Mildly Bullish",
+                "confidence": 64,
+                "positive_count": 8,
+                "negative_count": 4,
+                "neutral_count": 3,
+                "total_headlines": 15,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Suzlon Energy shares jump 3% as firm wins sixth repeat order for 100 MW from GAIL",
+                "source": "ET US Markets",
+                "vader_score": 0.7906,
+                "rule_boost": 0.2,
+                "combined_score": 0.5544,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.381,
+                    "negative": 0.0,
+                    "neutral": 0.619
+                }
+            },
+            {
+                "headline": "Sensex jumps over 650 points, Nifty nears 22,700 4 factors behind today s D-Street rally",
+                "source": "ET US Markets",
+                "vader_score": 0.4019,
+                "rule_boost": 0.45,
+                "combined_score": 0.4211,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.162,
+                    "negative": 0.0,
+                    "neutral": 0.838
+                }
+            },
+            {
+                "headline": "Silver price crashes 51%, plunges Rs 2.24 lakh from record peak! Should you catch this falling knife?",
+                "source": "ET US Markets",
+                "vader_score": -0.2598,
+                "rule_boost": -0.5,
+                "combined_score": -0.3559,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.113,
+                    "neutral": 0.887
+                }
+            },
+            {
+                "headline": "Muthoot Finance among 6 F&O stocks with a sharp rise in futures open interest",
+                "source": "ET US Markets",
+                "vader_score": 0.4588,
+                "rule_boost": 0.15,
+                "combined_score": 0.3353,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.188,
+                    "negative": 0.0,
+                    "neutral": 0.812
+                }
+            },
+            {
+                "headline": "Vedanta shares jump 3% after company announces Rs 11 interim dividend",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.35,
+                "combined_score": 0.3176,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.18,
+                    "negative": 0.0,
+                    "neutral": 0.82
+                }
+            },
+            {
+                "headline": "The obvious risk no one is talking about in the stock market now",
+                "source": "ET US Markets",
+                "vader_score": -0.5106,
+                "rule_boost": 0.0,
+                "combined_score": -0.3064,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.281,
+                    "neutral": 0.719
+                }
+            },
+            {
+                "headline": "Eternal shares to rally till Rs 415 after platform fee hike? What Elara said",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.145,
+                    "negative": 0.0,
+                    "neutral": 0.855
+                }
+            },
+            {
+                "headline": "AI firm Fractal Analytics shares rally 4% as Goldman Sachs, Morgan Stanley initiate coverage. Check details",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.128,
+                    "negative": 0.0,
+                    "neutral": 0.872
+                }
+            },
+            {
+                "headline": "L&T shares rebound 3% as Donald Trump signals potential end to war. Why does it matter for the construction major?",
+                "source": "ET US Markets",
+                "vader_score": -0.3818,
+                "rule_boost": 0.0,
+                "combined_score": -0.2291,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.136,
+                    "negative": 0.161,
+                    "neutral": 0.702
+                }
+            },
+            {
+                "headline": "HPCL, BPCL, IOC shares rise 4% as oil eases from recent highs after Trump delays Iran strikes",
+                "source": "ET US Markets",
+                "vader_score": 0.25,
+                "rule_boost": 0.15,
+                "combined_score": 0.21,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.214,
+                    "negative": 0.119,
+                    "neutral": 0.667
+                }
+            },
+            {
+                "headline": "Both Nifty bulls and bears left guessing as Iran war trajectory gives mixed signals to investors",
+                "source": "ET US Markets",
+                "vader_score": -0.296,
+                "rule_boost": 0.0,
+                "combined_score": -0.1776,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.131,
+                    "negative": 0.189,
+                    "neutral": 0.68
+                }
+            },
+            {
+                "headline": "HDFC Bank stock selloff halts after 4 days, rises 3%. What's happening?",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": -0.3,
+                "combined_score": -0.12,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Nomura upgrades Kotak Mahindra Bank, calls ICICI Bank preferred compounder. Here's why",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.25,
+                "combined_score": 0.1,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Vedanta, Coal India among 10 stocks with highest dividend yield of up to 6.3%. Check full list",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.15,
+                "combined_score": 0.06,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Upcoming IPOs 10 public issues that have received Sebi nod & can launch soon",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "constructions",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 3,
+            "sources_used": [
+                "ET US Markets"
+            ],
+            "analysis_timestamp": "2026-03-24T11:56:52.638134",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    },
+    "textiles": {
+        "stocks": {
+            "PAGEIND.NS": {
+                "overall_score": 0.088,
+                "classification": "Mildly Bullish",
+                "confidence": 63,
+                "positive_count": 8,
+                "negative_count": 5,
+                "neutral_count": 3,
+                "total_headlines": 16,
+                "prediction": "Bullish"
+            }
+        },
+        "headlines": [
+            {
+                "headline": "Suzlon Energy shares jump 3% as firm wins sixth repeat order for 100 MW from GAIL",
+                "source": "ET US Markets",
+                "vader_score": 0.7906,
+                "rule_boost": 0.2,
+                "combined_score": 0.5544,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.381,
+                    "negative": 0.0,
+                    "neutral": 0.619
+                }
+            },
+            {
+                "headline": "Sensex jumps over 650 points, Nifty nears 22,700 4 factors behind today s D-Street rally",
+                "source": "ET US Markets",
+                "vader_score": 0.4019,
+                "rule_boost": 0.45,
+                "combined_score": 0.4211,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.162,
+                    "negative": 0.0,
+                    "neutral": 0.838
+                }
+            },
+            {
+                "headline": "Silver price crashes 51%, plunges Rs 2.24 lakh from record peak! Should you catch this falling knife?",
+                "source": "ET US Markets",
+                "vader_score": -0.2598,
+                "rule_boost": -0.5,
+                "combined_score": -0.3559,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.113,
+                    "neutral": 0.887
+                }
+            },
+            {
+                "headline": "Muthoot Finance among 6 F&O stocks with a sharp rise in futures open interest",
+                "source": "ET US Markets",
+                "vader_score": 0.4588,
+                "rule_boost": 0.15,
+                "combined_score": 0.3353,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.188,
+                    "negative": 0.0,
+                    "neutral": 0.812
+                }
+            },
+            {
+                "headline": "Vedanta shares jump 3% after company announces Rs 11 interim dividend",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.35,
+                "combined_score": 0.3176,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.18,
+                    "negative": 0.0,
+                    "neutral": 0.82
+                }
+            },
+            {
+                "headline": "The obvious risk no one is talking about in the stock market now",
+                "source": "ET US Markets",
+                "vader_score": -0.5106,
+                "rule_boost": 0.0,
+                "combined_score": -0.3064,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.281,
+                    "neutral": 0.719
+                }
+            },
+            {
+                "headline": "Eternal shares to rally till Rs 415 after platform fee hike? What Elara said",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.145,
+                    "negative": 0.0,
+                    "neutral": 0.855
+                }
+            },
+            {
+                "headline": "AI firm Fractal Analytics shares rally 4% as Goldman Sachs, Morgan Stanley initiate coverage. Check details",
+                "source": "ET US Markets",
+                "vader_score": 0.296,
+                "rule_boost": 0.25,
+                "combined_score": 0.2776,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.128,
+                    "negative": 0.0,
+                    "neutral": 0.872
+                }
+            },
+            {
+                "headline": "L&T shares rebound 3% as Donald Trump signals potential end to war. Why does it matter for a construction major?",
+                "source": "ET US Markets",
+                "vader_score": -0.3818,
+                "rule_boost": 0.0,
+                "combined_score": -0.2291,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.136,
+                    "negative": 0.161,
+                    "neutral": 0.702
+                }
+            },
+            {
+                "headline": "HPCL, BPCL, IOC shares rise 4% as oil eases from recent highs after Trump delays Iran strikes",
+                "source": "ET US Markets",
+                "vader_score": 0.25,
+                "rule_boost": 0.15,
+                "combined_score": 0.21,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.214,
+                    "negative": 0.119,
+                    "neutral": 0.667
+                }
+            },
+            {
+                "headline": "Both Nifty bulls and bears left guessing as Iran war trajectory gives mixed signals to investors",
+                "source": "ET US Markets",
+                "vader_score": -0.296,
+                "rule_boost": 0.0,
+                "combined_score": -0.1776,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.131,
+                    "negative": 0.189,
+                    "neutral": 0.68
+                }
+            },
+            {
+                "headline": "HDFC Bank stock selloff halts after 4 days, rises 3%. What's happening?",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": -0.3,
+                "combined_score": -0.12,
+                "classification": "negative",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Nomura upgrades Kotak Mahindra Bank, calls ICICI Bank preferred compounder. Here's why",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.25,
+                "combined_score": 0.1,
+                "classification": "positive",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Vedanta, Coal India among 10 stocks with highest dividend yield of up to 6.3%. Check full list",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.15,
+                "combined_score": 0.06,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            },
+            {
+                "headline": "Upcoming IPOs 10 public issues that have received Sebi nod & can launch soon",
+                "source": "ET US Markets",
+                "vader_score": 0.0,
+                "rule_boost": 0.1,
+                "combined_score": 0.04,
+                "classification": "neutral",
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 1.0
+                }
+            }
+        ],
+        "metadata": {
+            "sector": "textiles",
+            "total_headlines_scraped": 16,
+            "total_analyzed": 16,
+            "stocks_analyzed": 1,
+            "sources_used": [
+                "ET US Markets"
+            ],
+            "analysis_timestamp": "2026-03-24T11:56:42.952365",
+            "method": "VADER + Rule-Based Domain Analysis"
+        }
+    }
+}
