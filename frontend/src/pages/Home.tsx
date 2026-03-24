@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import PriceTrendChart from '../components/PriceTrendChart';
 import MutualFunds from '../components/MutualFunds';
+import MarketIndices from '../components/MarketIndices';
 import { fetchLiveMetalsPrices, MetalsData } from '../services/metalsApi';
-import { yfinanceService, StockData } from '../services/yfinanceService';
+import { yfinanceService, StockData, NewsItem } from '../services/yfinanceService';
 import { getStaticHistoricalData } from '../services/staticHistoricalData';
 
 /* ─── keyframe animations ─── */
@@ -587,12 +588,36 @@ const StatBox = styled(motion.div)`
   }
 `;
 
+const NewsListCard = styled(BaseCard)`
+  grid-column: span 8;
+  @media (max-width: 1024px) { grid-column: span 12; }
+`;
+
+const NewsItemRow = styled(motion.div)`
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(0, 242, 254, 0.2);
+    transform: translateX(10px);
+  }
+`;
+
 
 /* ─── component ─── */
 const Home: React.FC = () => {
   const navigate = useNavigate();
   const [metals, setMetals] = useState<MetalsData | null>(null);
   const [trending, setTrending] = useState<StockData[]>([]);
+  const [news, setNews] = useState<NewsItem[]>([]);
   const historicalData = getStaticHistoricalData();
 
   useEffect(() => {
@@ -604,6 +629,10 @@ const Home: React.FC = () => {
           const itStocks = await yfinanceService.getSectorStocks('it');
           setTrending(itStocks.slice(0, 5));
         }
+        
+        // Load latest news
+        const newsData = await yfinanceService.getNews();
+        setNews(newsData.slice(0, 5));
       } catch (err) {
         console.error('Error loading home data:', err);
       }
@@ -726,20 +755,6 @@ const Home: React.FC = () => {
           <div className="status">-0.12% DOWNLINK</div>
         </MarketCard>
 
-        <ChartCard>
-          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h2 style={{ fontSize: '1.2rem', fontWeight: 900, letterSpacing: '2px', textTransform: 'uppercase' }}>
-              Technical Analysis <span>Neural Stream</span>
-            </h2>
-          </div>
-          <PriceTrendChart 
-            data={historicalData.goldHistory} 
-            title="" 
-            color="#00f2fe" 
-            icon=""
-          />
-        </ChartCard>
-
         <ListCard>
           <h2 style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '2rem' }}>
             Active Entities
@@ -778,6 +793,41 @@ const Home: React.FC = () => {
             ))}
           </div>
         </ListCard>
+
+        <NewsListCard>
+          <h2 style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            Intelligence Stream
+            <Link to="/news" style={{ fontSize: '0.65rem', color: '#00f2fe', textDecoration: 'none', borderBottom: '1px solid currentColor' }}>Full Log →</Link>
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {news.length > 0 ? news.map((item, idx) => (
+              <NewsItemRow
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8 + idx * 0.1 }}
+                onClick={() => item.url && window.open(item.url, '_blank')}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div style={{ fontWeight: 900, fontSize: '0.95rem', color: '#fff', lineHeight: '1.3' }}>{item.title}</div>
+                  <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'rgba(0,242,254,0.6)', textTransform: 'uppercase', padding: '0.2rem 0.5rem', background: 'rgba(0,242,254,0.1)', borderRadius: '6px' }}>{item.source}</div>
+                </div>
+                <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', display: 'flex', justifyContent: 'space-between' }}>
+                  <span>{item.category}</span>
+                  <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>{item.date}</span>
+                </div>
+              </NewsItemRow>
+            )) : (
+              <div style={{ padding: '2rem', textAlign: 'center', opacity: 0.3 }}>
+                <StatusText>Connecting to Neural Feed...</StatusText>
+              </div>
+            )}
+          </div>
+        </NewsListCard>
+
+        <div style={{ gridColumn: 'span 12', marginTop: '2rem' }}>
+          <MarketIndices />
+        </div>
       </GridContainer>
 
       {/* ───── MARKET MATRIX ───── */}

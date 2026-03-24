@@ -79,7 +79,7 @@ const CorrelationChart: React.FC<CorrelationChartProps> = ({ data }) => {
   const regressionLine = [
     { x: minGold, y: regressionSlope * minGold + regressionIntercept },
     { x: maxGold, y: regressionSlope * maxGold + regressionIntercept }
-  ] as const;
+  ];
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {

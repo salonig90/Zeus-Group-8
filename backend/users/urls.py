@@ -20,4 +20,6 @@ urlpatterns = [
     path('stocks/sector/<str:sector>/sentiment/', views.get_stock_sentiment, name='stock_sentiment'),
     path('admin/stocks/', views.manage_stocks, name='manage_stocks'),
     path('admin/stocks/<str:symbol>/', views.manage_stocks, name='remove_stock'),
+    path('market-indices/', views.get_market_indices, name='get_market_indices'),
+    path('news/', views.get_news, name='get_news'),
 ]

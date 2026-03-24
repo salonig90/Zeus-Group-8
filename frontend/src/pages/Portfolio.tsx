@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import PortfolioClusterGraph from '../components/PortfolioClusterGraph';
 
 const shimmer = keyframes`
   0% { background-position: -200% 0; }
@@ -458,6 +459,8 @@ const Portfolio: React.FC = () => {
           </div>
         </AnalyticsGrid>
       </SummarySection>
+
+      <PortfolioClusterGraph portfolio={portfolio} />
 
       {sectors.length > 0 ? (
         <>

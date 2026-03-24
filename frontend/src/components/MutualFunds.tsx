@@ -119,7 +119,7 @@ const MutualFunds: React.FC = () => {
   useEffect(() => {
     const fetchFunds = async () => {
       const data = await yfinanceService.getMutualFunds();
-      setFunds(data.slice(0, 6)); // Show top 6
+      setFunds(data.slice(0, 20)); // Show top 20
       setLoading(false);
     };
     fetchFunds();

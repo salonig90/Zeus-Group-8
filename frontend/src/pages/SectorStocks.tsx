@@ -556,18 +556,25 @@ const SectorStocks: React.FC = () => {
   const sectorName = sector.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: isUS ? 'USD' : 'INR',
       maximumFractionDigits: 2
     }).format(val);
   };
 
   const formatLargeNumber = (val: number) => {
-    if (val >= 1e12) return `$${(val / 1e12).toFixed(2)}T`;
-    if (val >= 1e9) return `$${(val / 1e9).toFixed(2)}B`;
-    if (val >= 1e6) return `$${(val / 1e6).toFixed(2)}M`;
-    return `$${val.toLocaleString()}`;
+    if (isUS) {
+      if (val >= 1e12) return `$${(val / 1e12).toFixed(2)}T`;
+      if (val >= 1e9) return `$${(val / 1e9).toFixed(2)}B`;
+      if (val >= 1e6) return `$${(val / 1e6).toFixed(2)}M`;
+      return `$${val.toLocaleString()}`;
+    } else {
+      // Indian numbering system (Lakhs/Crores)
+      if (val >= 1e7) return `₹${(val / 1e7).toFixed(2)}Cr`;
+      if (val >= 1e5) return `₹${(val / 1e5).toFixed(2)}L`;
+      return `₹${val.toLocaleString('en-IN')}`;
+    }
   };
 
   const getScoreType = (score: number): string => {
@@ -744,7 +751,7 @@ const SectorStocks: React.FC = () => {
       >
         <SearchInput
           type="text"
-          placeholder={`Search ${isUS ? 'US' : 'Indian'} ${sectorName} companies (e.g., ${isUS ? 'AAPL' : (sector === 'it' ? 'HCL' : 'TATA')})`}
+          placeholder={`Search ${isUS ? 'US' : 'Indian'} ${sectorName} companies (e.g., ${isUS ? 'NVDA, AAPL, MSFT' : (sector === 'it' ? 'HCL' : 'TATA')})`}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

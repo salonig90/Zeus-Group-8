@@ -16,6 +16,9 @@ import pytz
 import csv
 import os
 import requests
+from concurrent.futures import ThreadPoolExecutor
+from .news_service import get_real_news
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 
@@ -24,87 +27,107 @@ MFAPI_BASE_URL = "https://api.mfapi.in/mf"
 
 # Indian sector stocks data (NIFTY 200)
 INDIAN_SECTOR_STOCKS = {
-    'automobile': [
-        'BAJAJ-AUTO.NS', 'BHARATFORG.NS', 'BOSCHLTD.NS', 'EICHERMOT.NS', 'EXIDEIND.NS',
-        'HEROMOTOCO.NS', 'HYUNDAI.NS', 'MRF.NS', 'M&M.NS', 'MARUTI.NS',
-        'MOTHERSON.NS', 'SONACOMS.NS', 'TVSMOTOR.NS', 'TATAMOTORS.NS', 'TIINDIA.NS'
-    ],
-    'banking': [
-        'SBIN.NS', 'HDFCBANK.NS', 'ICICIBANK.NS', 'AXISBANK.NS', 'KOTAKBANK.NS',
-        'INDUSINDBK.NS', 'YESBANK.NS', 'BANKBARODA.NS', 'PNB.NS', 'CANBK.NS',
-        'UNIONBANK.NS', 'IDFCFIRSTB.NS', 'FEDERALBNK.NS', 'BANKINDIA.NS', 'INDIANB.NS'
-    ],
-    'finance': [
-        'BAJFINANCE.NS', 'BAJAJFINSV.NS', 'JIOFIN.NS', 'MUTHOOTFIN.NS', 'SHRIRAMFIN.NS',
-        'LICHSGFIN.NS', 'PFC.NS', 'RECLTD.NS', 'MOTILALOFS.NS', 'CHOLAFIN.NS',
-        'HDFCAMC.NS', 'HDFCLIFE.NS', 'SBILIFE.NS', 'ICICIGI.NS', 'PAYTM.NS',
-        'POLICYBZR.NS', 'IRFC.NS', 'IREDA.NS', 'HUDCO.NS', 'L&TFH.NS',
-        'M&MFIN.NS', 'BAJAJHFL.NS', 'MAXFSL.NS', 'SBICARD.NS', 'BSE.NS', '360ONE.NS'
-    ],
-    'energy': [
-        'RELIANCE.NS', 'NTPC.NS', 'POWERGRID.NS', 'TATAPOWER.NS', 'ADANIPOWER.NS',
-        'ADANIGREEN.NS', 'ADANIENSOL.NS', 'ONGC.NS', 'IOC.NS', 'BPCL.NS',
-        'HPCL.NS', 'GAIL.NS', 'COALINDIA.NS', 'OIL.NS', 'IGL.NS',
-        'ATGL.NS', 'NTPCGREEN.NS', 'TORNTPOWER.NS', 'JSWENERGY.NS'
-    ],
-    'pharma': [
-        'SUNPHARMA.NS', 'DRREDDY.NS', 'CIPLA.NS', 'DIVISLAB.NS', 'LUPIN.NS',
-        'AUROPHARMA.NS', 'BIOCON.NS', 'ZYDUSLIFE.NS', 'APOLLOHOSP.NS', 'FORTIS.NS',
-        'MAXHEALTH.NS', 'GLENMARK.NS', 'ALKEM.NS', 'MANKIND.NS', 'TORNTPHARM.NS'
-    ],
-    'fmcg': [
-        'HINDUNILVR.NS', 'ITC.NS', 'NESTLEIND.NS', 'BRITANNIA.NS', 'DABUR.NS',
-        'MARICO.NS', 'COLPAL.NS', 'GODREJCP.NS', 'TATACONSUM.NS', 'VBL.NS',
-        'PATANJALI.NS', 'UNITDSPR.NS'
-    ],
-    'metals': [
-        'TATASTEEL.NS', 'JSWSTEEL.NS', 'HINDALCO.NS', 'VEDL.NS', 'SAIL.NS',
-        'NMDC.NS', 'NATIONALUM.NS', 'HINDZINC.NS', 'JINDALSTEL.NS'
-    ],
-    'realty': [
-        'DLF.NS', 'GODREJPROP.NS', 'OBEROIREAL.NS', 'PRESTIGE.NS', 'PHOENIXLTD.NS', 'LODHA.NS'
-    ],
-    'it': [
-        'TCS.NS', 'INFY.NS', 'WIPRO.NS', 'HCLTECH.NS', 'TECHM.NS',
-        'LTIM.NS', 'PERSISTENT.NS', 'MPHASIS.NS', 'COFORGE.NS', 'OFSS.NS',
-        'KPITTECH.NS', 'TATAELXSI.NS', 'TATATECH.NS'
-    ],
-    'capital_goods': [
-        'ABB.NS', 'SIEMENS.NS', 'LT.NS', 'CUMMINSIND.NS', 'HAVELLS.NS',
-        'POLYCAB.NS', 'CGPOWER.NS', 'BEL.NS', 'BHEL.NS', 'HAL.NS',
-        'MAZDOCK.NS', 'KEI.NS', 'APLAPOLLO.NS', 'ASTRAL.NS', 'PREMIERENE.NS',
-        'WAREEENER.NS', 'ENRIN.NS'
-    ],
-    'telecom': [
-        'BHARTIARTL.NS', 'IDEA.NS', 'INDUSTOWER.NS', 'TATACOMM.NS', 'BHARTIHEXA.NS'
-    ],
-    'chemicals': [
-        'UPL.NS', 'SRF.NS', 'PIIND.NS', 'PIDILITIND.NS', 'COROMANDEL.NS', 'SOLARINDS.NS'
-    ],
-    'consumer_durables': [
-        'TITAN.NS', 'VOLTAS.NS', 'HAVELLS.NS', 'DIXON.NS', 'BLUESTARCO.NS', 'KALYANKJIL.NS'
-    ],
-    'construction': [
-        'ULTRACEMCO.NS', 'GRASIM.NS', 'AMBUJACEM.NS', 'ACC.NS', 'IRB.NS', 'RVNL.NS'
-    ],
-    'hospitality': [
-        'INDHOTEL.NS', 'ITCHOTELS.NS', 'IRCTC.NS', 'JUBLFOOD.NS', 'DMART.NS',
-        'TRENT.NS', 'SWIGGY.NS', 'NYKAA.NS', 'ZOMATO.NS'
-    ],
+    'automobile and auto components': [],
+    'capital goods': [],
+    'chemicals': [],
+    'constructions': [],
+    'construction materials': [],
+    'consumer durables': [],
+    'consumer services': [],
+    'fast moving consumer goods': [],
+    'financial services': [],
+    'health care': [],
+    'information technology': [],
+    'metals & mining': [],
+    'oil gas and consumable fuels': [],
+    'power': [],
+    'realty': [],
+    'telecommunication': [],
+    'textiles': [],
     'us_stocks': [
         'NVDA', 'AAPL', 'MSFT', 'AMZN', 'GOOGL', 'GOOG', 'META', 'BRCM', 'TSLA', 'BRK-B', 'WMT', 'LLY', 'JPM', 'XOM', 'V', 'JNJ', 'MU', 'MA', 'COST', 'ORCL', 'CVX', 'NFLX', 'ABBV', 'PLTR', 'BAC', 'PG', 'AMD', 'KO', 'HD', 'CAT', 'CSCO', 'GE', 'LRCX', 'AMAT', 'MRK', 'RTX', 'MS', 'PM', 'UNH', 'GS', 'WFC', 'TMUS', 'GEV', 'IBM', 'LIN', 'MCD', 'INTC', 'VZ', 'PEP', 'AXP', 'T', 'KLAC', 'C', 'AMGN', 'NEE', 'ABT', 'CRM', 'DIS', 'TMO', 'TJX', 'TXN', 'GILD', 'ISRG', 'SCHW', 'ANET', 'APH', 'COP', 'PFE', 'BA', 'UBER', 'DE', 'ADI', 'APP', 'BLK', 'LMT', 'HON', 'UNP', 'QCOM', 'ETN', 'BKNG', 'WELL', 'DHR', 'PANW', 'SYK', 'SPGI', 'LOW', 'INTU', 'CB', 'ACN', 'PGR', 'PLD', 'BMY', 'NOW', 'VRTX', 'PH', 'COF', 'MDT', 'HCA', 'CME', 'MCK', 'MO', 'GLW', 'SBUX', 'SNDK', 'SO', 'CMCSA', 'NEM', 'CRWD', 'BSX', 'CEG', 'DELL', 'ADBE', 'NOC', 'WDC', 'DUK', 'EQIX', 'GD', 'WM', 'HWM', 'STX', 'CVS', 'TT', 'ICE', 'WMB', 'BX', 'MMC', 'MAR', 'FDX', 'ADP', 'PWR', 'AMT', 'UPS', 'PNC', 'SNPS', 'KKR', 'USB', 'JCI', 'BK', 'CDNS', 'NKE', 'REGN', 'MCO', 'ABNB', 'SHW', 'MSI', 'FCX', 'EOG', 'MMM', 'ITW', 'CMI', 'ORLY', 'KMI', 'ECL', 'MNST', 'MDLZ', 'EMR', 'CTAS', 'VLO', 'RCL', 'CSX', 'PSX', 'SLB', 'AON', 'CI', 'MPC', 'ROST', 'CL', 'DASH', 'WBD', 'AEP', 'RSG', 'CRH', 'HLT', 'TDG', 'LHX', 'GM', 'APO', 'ELV', 'TRV', 'HOOD', 'COR', 'NSC', 'APD', 'FTNT', 'SPG', 'SRE', 'OXY', 'BKR', 'DLR', 'PCAR', 'TEL', 'O', 'OKE', 'AJG', 'AFL', 'TFC', 'CIEN', 'AZO', 'FANG', 'ALL'
-    ]
+    ],
+    'usa': []
 }
+
+def load_usa_stocks_from_excel():
+    """Read USA stocks from the usa.xlsx file."""
+    # views.py is in backend/users/views.py. We need to go up 3 levels to reach the root e:/combined/
+    excel_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'usa.xlsx')
+    try:
+        if os.path.exists(excel_path):
+            df = pd.read_excel(excel_path)
+            # Standardize columns (Symbol, Company/Name, Price)
+            stocks = []
+            for _, row in df.iterrows():
+                stocks.append({
+                    'symbol': str(row['Symbol']),
+                    'name': str(row['Company']),
+                    'price': float(row.get('Price', 100))
+                })
+            return stocks
+    except Exception as e:
+        logger.error(f"Error reading usa.xlsx: {str(e)}")
+    return []
 
 # Common Indian Mutual Funds (Scheme Codes for MFAPI.in)
 INDIAN_MUTUAL_FUNDS = [
-    {'code': '120503', 'name': 'SBI Small Cap Fund'},
+    # Large Cap / Bluechip
+    {'code': '120505', 'name': 'Axis Bluechip Fund'},
     {'code': '119063', 'name': 'HDFC Top 100 Fund'},
     {'code': '120594', 'name': 'ICICI Prudential Bluechip Fund'},
-    {'code': '118666', 'name': 'Nippon India Small Cap Fund'},
-    {'code': '120505', 'name': 'Axis Bluechip Fund'},
+    {'code': '120716', 'name': 'SBI Bluechip Fund'},
     {'code': '118989', 'name': 'Mirae Asset Large Cap Fund'},
+    
+    # Mid Cap
+    {'code': '120502', 'name': 'Axis Midcap Fund'},
+    {'code': '119062', 'name': 'HDFC Mid-Cap Opportunities Fund'},
+    {'code': '120464', 'name': 'Kotak Emerging Equity Fund'},
+    
+    # Small Cap
+    {'code': '120503', 'name': 'SBI Small Cap Fund'},
+    {'code': '118666', 'name': 'Nippon India Small Cap Fund'},
+    {'code': '120847', 'name': 'Quant Small Cap Fund'},
+    
+    # Flexi Cap / Multi Cap
+    {'code': '122639', 'name': 'Parag Parikh Flexi Cap Fund'},
+    {'code': '118668', 'name': 'Nippon India Multi Cap Fund'},
+    
+    # ELSS (Tax Saving)
+    {'code': '120849', 'name': 'Quant ELSS Tax Saver Fund'},
+    
+    # Index Funds
+    {'code': '120152', 'name': 'UTI Nifty 50 Index Fund'},
 ]
+
+def fetch_single_fund(fund_code, fund_name):
+    """Fetch single mutual fund data from MFAPI.in"""
+    try:
+        response = requests.get(f"{MFAPI_BASE_URL}/{fund_code}", timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            meta = data.get('meta', {})
+            nav_history = data.get('data', [])
+            
+            if nav_history:
+                current_nav = float(nav_history[0].get('nav', 0))
+                prev_nav = float(nav_history[1].get('nav', current_nav)) if len(nav_history) > 1 else current_nav
+                change = current_nav - prev_nav
+                change_pct = (change / prev_nav * 100) if prev_nav > 0 else 0
+                
+                return {
+                    'symbol': fund_code,
+                    'name': meta.get('scheme_name', fund_name),
+                    'currentPrice': round(current_nav, 2),
+                    'change': round(change, 2),
+                    'changePercent': round(change_pct, 2),
+                    'category': meta.get('scheme_category', 'Equity'),
+                    'rating': random.randint(3, 5),
+                    'aum': random.randint(5000, 50000)
+                }
+    except Exception as e:
+        logger.error(f"Error fetching MF {fund_code}: {str(e)}")
+    return None
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
@@ -113,35 +136,16 @@ def get_mutual_funds(request):
     try:
         funds_data = []
         
-        # 1. Fetch Indian Mutual Funds from MFAPI.in
-        for fund in INDIAN_MUTUAL_FUNDS:
-            try:
-                # MFAPI.in provides scheme data including historical NAVs
-                response = requests.get(f"{MFAPI_BASE_URL}/{fund['code']}", timeout=5)
-                if response.status_code == 200:
-                    data = response.json()
-                    meta = data.get('meta', {})
-                    nav_history = data.get('data', [])
-                    
-                    if nav_history:
-                        current_nav = float(nav_history[0].get('nav', 0))
-                        prev_nav = float(nav_history[1].get('nav', current_nav)) if len(nav_history) > 1 else current_nav
-                        change = current_nav - prev_nav
-                        change_pct = (change / prev_nav * 100) if prev_nav > 0 else 0
-                        
-                        funds_data.append({
-                            'symbol': fund['code'],
-                            'name': meta.get('scheme_name', fund['name']),
-                            'currentPrice': round(current_nav, 2),
-                            'change': round(change, 2),
-                            'changePercent': round(change_pct, 2),
-                            'category': meta.get('scheme_category', 'Equity'),
-                            'rating': random.randint(3, 5),
-                            'aum': random.randint(5000, 50000) # MFAPI doesn't provide AUM easily
-                        })
-            except Exception as e:
-                logger.error(f"Error fetching MF {fund['code']}: {str(e)}")
-                continue
+        # 1. Fetch Indian Mutual Funds from MFAPI.in in parallel
+        with ThreadPoolExecutor(max_workers=15) as executor:
+            futures = [
+                executor.submit(fetch_single_fund, fund['code'], fund['name'])
+                for fund in INDIAN_MUTUAL_FUNDS
+            ]
+            for future in futures:
+                result = future.result()
+                if result:
+                    funds_data.append(result)
 
         # 2. Fetch Global Mutual Funds/ETFs from yfinance
         GLOBAL_FUNDS = ['VFIAX', 'VTSAX', 'VFFVX']
@@ -453,13 +457,12 @@ def get_sector_stocks(request, sector):
         # Check if we have stocks for this sector in the database
         db_stocks = Stock.objects.filter(sector=sector)
         
-        # If no stocks in database OR if we want to ensure sync with INDIAN_SECTOR_STOCKS
-        # For this update, we'll force a check if the sector is in our new mapping
+        # For this update, we'll force a check if the sector is valid in our mapping
         if sector in INDIAN_SECTOR_STOCKS:
-            expected_symbols = INDIAN_SECTOR_STOCKS[sector]
-            
             # If database count doesn't match or is empty, we sync/seed
-            if not db_stocks.exists() or db_stocks.count() != len(expected_symbols):
+            # Check if seeding is needed (only if db is empty and expected_symbols is not empty)
+            expected_symbols = INDIAN_SECTOR_STOCKS[sector]
+            if not db_stocks.exists() and expected_symbols:
                 # Realistic fallback prices for Indian and International stocks
                 REALISTIC_PRICES = {
                     # IT Stocks
@@ -524,29 +527,57 @@ def get_sector_stocks(request, sector):
                 }
                 
                 # Update or create stocks to ensure they are in the correct sector
-                for symbol in expected_symbols:
-                    try:
-                        base_price = REALISTIC_PRICES.get(symbol, 100)
-                        variation = random.uniform(-0.05, 0.05)
-                        current_price = base_price * (1 + variation)
-                        
-                        Stock.objects.update_or_create(
-                            symbol=symbol,
-                            defaults={
-                                'name': symbol.replace('.NS', '').replace('-', ' '),
-                                'sector': sector,
-                                'current_price': float(current_price),
-                                'change': 0,
-                                'change_percent': 0,
-                                'day_high': float(current_price * 1.01),
-                                'day_low': float(current_price * 0.99),
-                                'pe_ratio': round(random.uniform(15, 30), 2),
-                                'market_cap': random.randint(50000000000, 800000000000),
-                                'volume': random.randint(100000, 50000000)
-                            }
-                        )
-                    except Exception as e:
-                        logger.error(f"Error seeding stock {symbol}: {str(e)}")
+                # Special handling for USA stocks from Excel
+                if sector in ['usa', 'us_stocks']:
+                    usa_excel_stocks = load_usa_stocks_from_excel()
+                    if usa_excel_stocks:
+                        for item in usa_excel_stocks:
+                            Stock.objects.update_or_create(
+                                symbol=item['symbol'],
+                                defaults={
+                                    'name': item['name'],
+                                    'sector': sector,
+                                    'current_price': item['price'],
+                                    'change': 0,
+                                    'change_percent': 0,
+                                    'day_high': item['price'] * 1.01,
+                                    'day_low': item['price'] * 0.99,
+                                    'pe_ratio': round(random.uniform(15, 30), 2),
+                                    'market_cap': random.randint(50000000000, 800000000000),
+                                    'volume': random.randint(100000, 50000000)
+                                }
+                            )
+                        # Re-fetch symbols for subsequent logic if needed
+                        expected_symbols = [s['symbol'] for s in usa_excel_stocks]
+                    else:
+                        # Fallback to existing expected_symbols if excel fails
+                        for symbol in expected_symbols:
+                            process_single_stock(symbol, sector, REALISTIC_PRICES)
+                else:
+                    for symbol in expected_symbols:
+                        try:
+                            # Re-using logic but cleaner
+                            base_price = REALISTIC_PRICES.get(symbol, 100)
+                            variation = random.uniform(-0.05, 0.05)
+                            current_price = base_price * (1 + variation)
+                            
+                            Stock.objects.update_or_create(
+                                symbol=symbol,
+                                defaults={
+                                    'name': symbol.replace('.NS', '').replace('-', ' '),
+                                    'sector': sector,
+                                    'current_price': float(current_price),
+                                    'change': 0,
+                                    'change_percent': 0,
+                                    'day_high': float(current_price * 1.01),
+                                    'day_low': float(current_price * 0.99),
+                                    'pe_ratio': round(random.uniform(15, 30), 2),
+                                    'market_cap': random.randint(50000000000, 800000000000),
+                                    'volume': random.randint(100000, 50000000)
+                                }
+                            )
+                        except Exception as e:
+                            logger.error(f"Error seeding stock {symbol}: {str(e)}")
                 
                 # Refresh the list from DB
                 db_stocks = Stock.objects.filter(sector=sector)
@@ -591,38 +622,129 @@ def get_sector_stocks(request, sector):
             'error': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Map DB stocks to response format
-        stocks_data = []
-        ist = pytz.timezone('Asia/Kolkata')
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_market_indices(request):
+    """Fetch market indices data from yfinance (simulating ETMoney data structure)"""
+    try:
+        # Mapping index names to yfinance symbols
+        indices_map = {
+            'Nifty 50': '^NSEI',
+            'Nifty Next 50': '^NSEJR',
+            'Nifty 100': '^CNX100',
+            'Nifty 200': '^CNX200',
+            'Nifty 500': '^CNX500',
+            'Nifty Midcap 50': '^NSEMDCP50',
+            'Nifty Midcap 100': '^CNXMID',
+            'Nifty Midcap 150': '^NSMIDCP',
+            'Nifty Smallcap 50': '^CNXSC',
+            'Nifty Smallcap 100': '^CNXSC',
+            'Nifty Smallcap 250': '^NSMIDCP',
+            'Nifty Bank': '^NSEBANK',
+            'Nifty IT': '^CNXIT',
+            'Nifty FMCG': '^CNXFMCG',
+            'Nifty Pharma': '^CNXPHARMA',
+            'Nifty Metal': '^CNXMETAL',
+            'Nifty Energy': '^CNXENERGY',
+            'Nifty Realty': '^CNXREALTY'
+        }
+
+        indices_data = []
         
-        for stock in db_stocks:
-            stocks_data.append({
-                'symbol': stock.symbol,
-                'name': stock.name,
-                'currentPrice': round(stock.current_price, 2),
-                'change': round(stock.change, 2),
-                'changePercent': round(stock.change_percent, 2),
-                'dayHigh': round(stock.day_high, 2),
-                'dayLow': round(stock.day_low, 2),
-                'peRatio': round(stock.pe_ratio, 2),
-                'marketCap': stock.market_cap,
-                'volume': stock.volume,
-                'sector': stock.sector
-            })
+        # Fallback values for Nifty indices
+        FALLBACK_DATA = {
+            'Nifty 50': {'price': 22601.20, '1d': -2.22, '1w': -0.16, '1y': -0.33, '3y': 36.06},
+            'Nifty Next 50': {'price': 61618.20, '1d': -3.51, '1w': -1.28, '1y': 2.49, '3y': 70.24},
+            'Nifty 100': {'price': 23187.25, '1d': -2.44, '1w': -0.35, '1y': 0.15, '3y': 41.02},
+            'Nifty 200': {'price': 12643.90, '1d': -2.63, '1w': -0.25, '1y': 1.34, '3y': 46.79},
+            'Nifty 500': {'price': 20738.10, '1d': -2.77, '1w': -0.30, '1y': 1.22, '3y': 48.97},
+            'Nifty Midcap 50': {'price': 15057.80, '1d': -3.31, '1w': 0.32, '1y': 7.55, '3y': 85.56},
+            'Nifty Midcap 100': {'price': 52920.75, '1d': -3.53, '1w': 0.17, '1y': 7.26, '3y': 84.19},
+            'Nifty Midcap 150': {'price': 19515.25, '1d': -3.52, '1w': -0.03, '1y': 6.75, '3y': 79.87},
+            'Nifty Smallcap 50': {'price': 7399.60, '1d': -3.69, '1w': -1.39, '1y': 0.56, '3y': 87.39},
+            'Nifty Smallcap 100': {'price': 15110.05, '1d': -3.87, '1w': -1.11, '1y': -0.88, '3y': 74.54},
+            'Nifty Smallcap 250': {'price': 14247.70, '1d': -3.68, '1w': -0.44, '1y': -0.87, '3y': 68.48},
+            'Nifty Bank': {'price': 48116.50, '1d': -2.15, '1w': -0.50, '1y': 12.40, '3y': 45.20},
+            'Nifty IT': {'price': 34520.10, '1d': -1.80, '1w': 0.20, '1y': 15.60, '3y': 38.40},
+            'Nifty FMCG': {'price': 54200.75, '1d': -0.45, '1w': 1.10, '1y': 10.20, '3y': 52.10},
+            'Nifty Pharma': {'price': 18950.30, '1d': -1.20, '1w': -0.30, '1y': 25.40, '3y': 62.80},
+            'Nifty Metal': {'price': 9100.25, '1d': -2.80, '1w': -1.50, '1y': 35.10, '3y': 88.40},
+            'Nifty Energy': {'price': 39450.60, '1d': -3.10, '1w': -2.10, '1y': 42.30, '3y': 95.10},
+            'Nifty Realty': {'price': 945.15, '1d': -4.50, '1w': -3.20, '1y': 110.40, '3y': 180.20}
+        }
+
+        for name, symbol in indices_map.items():
+            try:
+                ticker = yf.Ticker(symbol)
+                info = ticker.info
+                current_price = info.get('regularMarketPrice')
+                
+                # Try getting from history if info fails
+                if current_price is None:
+                    hist_1d = ticker.history(period='2d')
+                    if not hist_1d.empty and len(hist_1d) >= 1:
+                        current_price = hist_1d.iloc[-1]['Close']
+                
+                if current_price:
+                    # 1D Change
+                    change_1d = info.get('regularMarketChangePercent', 0)
+                    if not change_1d:
+                        hist_2d = ticker.history(period='2d')
+                        if len(hist_2d) >= 2:
+                            change_1d = ((hist_2d.iloc[-1]['Close'] - hist_2d.iloc[-2]['Close']) / hist_2d.iloc[-2]['Close'] * 100)
+                    
+                    # 1W Change
+                    hist_1w = ticker.history(period='10d')
+                    change_1w = ((hist_1w.iloc[-1]['Close'] - hist_1w.iloc[0]['Close']) / hist_1w.iloc[0]['Close'] * 100) if len(hist_1w) > 5 else 0
+                    
+                    # 1Y Change
+                    hist_1y = ticker.history(period='1y')
+                    change_1y = ((hist_1y.iloc[-1]['Close'] - hist_1y.iloc[0]['Close']) / hist_1y.iloc[0]['Close'] * 100) if len(hist_1y) > 200 else 0
+                    
+                    # 3Y Change
+                    hist_3y = ticker.history(period='3y')
+                    change_3y = ((hist_3y.iloc[-1]['Close'] - hist_3y.iloc[0]['Close']) / hist_3y.iloc[0]['Close'] * 100) if len(hist_3y) > 600 else 0
+
+                    indices_data.append({
+                        'name': name,
+                        'price': round(current_price, 2),
+                        'change1D': round(change_1d, 2),
+                        'change1W': round(change_1w, 2),
+                        'change1Y': round(change_1y, 2),
+                        'change3Y': round(change_3y, 2)
+                    })
+                else:
+                    # Use fallback if yfinance fails
+                    fb = FALLBACK_DATA.get(name)
+                    indices_data.append({
+                        'name': name,
+                        'price': fb['price'],
+                        'change1D': fb['1d'],
+                        'change1W': fb['1w'],
+                        'change1Y': fb['1y'],
+                        'change3Y': fb['3y']
+                    })
+            except Exception as e:
+                logger.error(f"Error fetching {name}: {str(e)}")
+                fb = FALLBACK_DATA.get(name)
+                indices_data.append({
+                    'name': name,
+                    'price': fb['price'],
+                    'change1D': fb['1d'],
+                    'change1W': fb['1w'],
+                    'change1Y': fb['1y'],
+                    'change3Y': fb['3y']
+                })
 
         return Response({
             'success': True,
-            'sector': sector,
-            'data': stocks_data,
-            'count': len(stocks_data),
-            'timestamp': datetime.now(ist).isoformat()
+            'data': indices_data
         }, status=status.HTTP_200_OK)
-
     except Exception as e:
-        logger.error(f"Error fetching sector stocks: {str(e)}")
+        logger.error(f"Error in get_market_indices: {str(e)}")
         return Response({
             'success': False,
-            'message': 'Error fetching sector stocks',
+            'message': 'Error fetching market indices',
             'error': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -801,13 +923,15 @@ def refresh_sector_prices(request, sector):
     try:
         sector = sector.lower()
 
-        if sector not in INDIAN_SECTOR_STOCKS:
-            return Response({
-                'success': False,
-                'message': f'Sector {sector} not found'
-            }, status=status.HTTP_404_NOT_FOUND)
+        if sector in ['usa', 'us_stocks']:
+            usa_excel_stocks = load_usa_stocks_from_excel()
+            if usa_excel_stocks:
+                symbols = [s['symbol'] for s in usa_excel_stocks]
+            else:
+                symbols = INDIAN_SECTOR_STOCKS.get(sector, [])
+        else:
+            symbols = INDIAN_SECTOR_STOCKS.get(sector, [])
 
-        symbols = INDIAN_SECTOR_STOCKS[sector]
         updated_stocks = []
         
         # Delete existing prices for this sector to refresh
@@ -872,7 +996,7 @@ def refresh_sector_prices(request, sector):
             'BAC': 38, 'WFC': 58, 'GS': 450, 'TM': 215, 'GM': 58, 'F': 12, 'XOM': 110, 'CVX': 165, 'COP': 128, 'MPC': 85,
             'JNJ': 157, 'UNH': 520, 'PFE': 28, 'ABBV': 205, 'PG': 162, 'KO': 63, 'NSRGY': 95, 'DEO': 72, 'VALE': 12, 'RIO': 68,
             'SCCO': 45, 'FCX': 45, 'BX': 135, 'KKR': 135, 'BLK': 910, 'AMP': 305, 'RCL': 165, 'CCL': 22, 'MAR': 320, 'HLT': 215,
-            'SPG': 143, 'PLD': 56, 'VNO': 48, 'AMB': 128
+            'SPG': 143, 'PLD': 56, 'VNO': 48, 'AMB': 128,
         }
         
         for symbol in symbols:
@@ -1216,3 +1340,21 @@ def get_stock_sentiment(request, sector):
             'message': 'Error performing stock sentiment analysis',
             'error': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_news(request):
+    """Fetch real-time financial news from multi-source RSS feeds"""
+    try:
+        news_data = get_real_news()
+        return Response({
+            'success': True,
+            'count': len(news_data),
+            'data': news_data
+        })
+    except Exception as e:
+        logger.error(f"Error in get_news view: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Failed to fetch news'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
