@@ -121,6 +121,13 @@ export const yfinanceService = {
       console.error('Error fetching news:', err);
       return [];
     }
+  },
+
+  formatStockPrice(price: number, symbol: string): string {
+    if (symbol.endsWith('.NS') || symbol.endsWith('.BO')) {
+      return `₹${price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+    return `$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   }
 };
 
