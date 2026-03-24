@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import PriceTrendChart from '../components/PriceTrendChart';
-import MutualFunds from '../components/MutualFunds';
 import { fetchLiveMetalsPrices, MetalsData } from '../services/metalsApi';
 import { yfinanceService, StockData } from '../services/yfinanceService';
 import { getStaticHistoricalData } from '../services/staticHistoricalData';
@@ -751,7 +750,7 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
-                onClick={() => navigate(`/vectors/${stock.symbol}`)}
+                onClick={() => navigate(`/stocks/${stock.sector || 'it'}`)}
                 style={{
                   padding: '1.2rem',
                   background: 'rgba(255,255,255,0.02)',
@@ -769,7 +768,7 @@ const Home: React.FC = () => {
                   <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>{stock.name}</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontWeight: 900, fontFamily: 'JetBrains Mono, monospace' }}>${(stock.currentPrice || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                  <div style={{ fontWeight: 800, fontFamily: 'JetBrains Mono' }}>{yfinanceService.formatStockPrice(stock.currentPrice || 0, stock.symbol)}</div>
                   <div style={{ fontSize: '0.8rem', fontWeight: 800, color: (stock.change || 0) >= 0 ? '#00ffa3' : '#ff2e63' }}>
                     {(stock.change || 0) >= 0 ? '+' : ''}{(stock.changePercent || 0).toFixed(2)}%
                   </div>
@@ -790,21 +789,12 @@ const Home: React.FC = () => {
           Market Matrix
         </h2>
         {[
-          { name: 'Automobile', icon: '🚗', path: '/vectors/automobile' },
-          { name: 'Banking', icon: '🏦', path: '/vectors/banking' },
-          { name: 'Finance', icon: '💰', path: '/vectors/finance' },
-          { name: 'Energy', icon: '⚡', path: '/vectors/energy' },
-          { name: 'Pharma', icon: '💊', path: '/vectors/pharma' },
-          { name: 'FMCG', icon: '🛒', path: '/vectors/fmcg' },
-          { name: 'Metals', icon: '⛏️', path: '/vectors/metals' },
-          { name: 'Realty', icon: '🏗️', path: '/vectors/realty' },
-          { name: 'IT', icon: '💻', path: '/vectors/it' },
-          { name: 'Capital Goods', icon: '🏭', path: '/vectors/capital_goods' },
-          { name: 'Telecom', icon: '📡', path: '/vectors/telecom' },
-          { name: 'Chemicals', icon: '🧪', path: '/vectors/chemicals' },
-          { name: 'Durables', icon: '🧺', path: '/vectors/consumer_durables' },
-          { name: 'Construction', icon: '🏗️', path: '/vectors/construction' },
-          { name: 'Hospitality', icon: '🏨', path: '/vectors/hospitality' },
+          { name: 'Automobile', icon: '🚗', path: '/stocks/automobile' },
+          { name: 'Hospitality', icon: '🏨', path: '/stocks/hospitality' },
+          { name: 'Finance', icon: '💼', path: '/stocks/finance' },
+          { name: 'Banking', icon: '🏦', path: '/stocks/banking' },
+          { name: 'Energy', icon: '⚡', path: '/stocks/energy' },
+          { name: 'Pharma', icon: '💊', path: '/stocks/pharma' },
         ].map(item => (
           <MatrixCard key={item.name} onClick={() => navigate(item.path)}>
             <div className="icon">{item.icon}</div>
@@ -812,9 +802,6 @@ const Home: React.FC = () => {
           </MatrixCard>
         ))}
       </GridContainer>
-
-      {/* ───── MUTUAL FUNDS ───── */}
-      <MutualFunds />
 
       {/* ───── GLOBAL INDICES ───── */}
       <h2 style={{ gridColumn: 'span 12', fontSize: '1.2rem', fontWeight: 900, letterSpacing: '2px', textTransform: 'uppercase', margin: '4rem 0 2rem' }}>
@@ -845,7 +832,7 @@ const Home: React.FC = () => {
         <div>
           <div className="title">Technology</div>
           <div className="description">The tech sector is buzzing with innovation, from AI and machine learning to the latest in consumer electronics. Explore the companies shaping our future.</div>
-          <Link to="/vectors/automobile" style={{ color: '#00f2fe', textDecoration: 'none', fontWeight: 700 }}>Explore Vectors →</Link>
+          <Link to="/stocks/automobile" style={{ color: '#00f2fe', textDecoration: 'none', fontWeight: 700 }}>Explore Sectors →</Link>
         </div>
       </SectorSpotlight>
 
